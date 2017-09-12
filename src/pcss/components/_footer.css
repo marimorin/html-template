@@ -1,0 +1,5 @@
+#footer { display:flex; justify-content:center; background: var(--mainColor);
+	.footer-in { width:var(--maxWidth); margin:0 20px;
+		.copyright { height:30px; display:flex; justify-content: center; align-items:center; color:#fff; }
+	}
+}
