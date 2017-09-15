@@ -1,9 +1,10 @@
+/* @flow */
 import $ from 'jquery'
 
 export default class Button {
   constructor(selector) {
     this.button = $(selector)
-	  this.target = ''
+    this.target = ''
     this.className = ''
 
     this.add = this.add.bind(this)
@@ -24,7 +25,7 @@ export default class Button {
     this.target.toggleClass(this.className)
   }
 
-  setEventListener({ actionType, target, className }) {
+  setEventListener({ actionType: string, target: object, className: string }) {
     let handler = null
     this.target = $(target)
     this.className = className
@@ -41,7 +42,7 @@ export default class Button {
       default:
         break
     }
-    this.button.on('click', (e) => {
+    this.button.on('click', e => {
       e.preventDefault()
       handler()
     })

@@ -8,7 +8,7 @@ export default class Menu {
   }
 
   setEventListener({ actionType, callback }) {
-  	const type = `transition${actionType}`
+    const type = `transition${actionType}`
     this.menu.on(type, callback)
   }
 }

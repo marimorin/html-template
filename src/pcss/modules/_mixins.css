@@ -1,2 +1,4 @@
 @define-mixin test {
+  display: block;
 }
+

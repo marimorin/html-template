@@ -1,11 +1,11 @@
-#slide-menu { width:100%; position:fixed; left:0; top:0; background:olive; transform: translateX(100%); transition: transform .3s ease-in-out;
-	body.OPEN_SlideMenu & { transform: translateX(0); }
-	nav {
-		ul {
-			li { border-bottom: solid 1px #fff;
-				a { display: block; padding:5px 0; }
-			}
-		}
-	}
+#slide-menu { width: 100%; position: fixed; left: 0; top: 0; background: olive; transform: translateX(100%); transition: transform .3s ease-in-out;
+  body.OPEN_SlideMenu & { transform: translateX(0); }
+  nav {
+    ul {
+      li { border-bottom: solid 1px #fff;
+        a { display: block; padding: 5px 0; }
+      }
+    }
+  }
 }
 

@@ -1,1 +1,3 @@
-body.page-front { }
+body.page-front {
+  .test { display: block; }
+}

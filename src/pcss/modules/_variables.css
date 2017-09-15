@@ -1,17 +1,17 @@
 :root {
-	--fontFamily: Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	--baseColor: #EAEAE0;
-	--baseColorRGB: rgba(234, 234, 224, 1.0);
-	--baseColorRGBA0: rgba(234, 234, 224, 0);
-	--mainColor: #00336D;
-	--mainColorRGB: rgba(0, 51, 109, 1.0);
-	--mainColorRGBA0: rgba(0, 51, 109, 0);
-	--accentColor: #4D9BE8;
-	--accentColorRGB: rgba(77, 155, 232, 1.0);
-	--accentColorRGBA0: rgba(77, 155, 232, 0);
-	--whiteColor: #FFF;
-	--whiteColorRGB: rgba(255, 255, 255, 1.0);
-	--whiteColorRGBA0: rgba(255, 255, 255, 0);
-	--maxWidth: 1000px;
-	--maxWidthSide: 200px;
+  --fontFamily: Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  --baseColor: #eaeae0;
+  --baseColorRGB: rgba(234, 234, 224, 1);
+  --baseColorRGBA0: rgba(234, 234, 224, 0);
+  --mainColor: #00336d;
+  --mainColorRGB: rgba(0, 51, 109, 1);
+  --mainColorRGBA0: rgba(0, 51, 109, 0);
+  --accentColor: #4d9be8;
+  --accentColorRGB: rgba(77, 155, 232, 1);
+  --accentColorRGBA0: rgba(77, 155, 232, 0);
+  --whiteColor: #fff;
+  --whiteColorRGB: rgba(255, 255, 255, 1);
+  --whiteColorRGBA0: rgba(255, 255, 255, 0);
+  --maxWidth: 1000px;
+  --maxWidthSide: 200px;
 }
