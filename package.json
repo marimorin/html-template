@@ -1,8 +1,8 @@
 {
-  "name": "xxx",
+  "name": "template-html",
   "version": "1.0.0",
-  "main": "app.js",
-  "author": "xxx",
+  "main": "index.js",
+  "author": "marimorin",
   "license": "MIT",
   "engines": {
     "node": ">=7.10.0",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@xxx"
+    "url": "git@marimorin"
   },
   "scripts": {
     "build": "cross-env NODE_ENV=develop webpack --progress --colors",

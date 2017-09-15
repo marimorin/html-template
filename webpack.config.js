@@ -36,11 +36,9 @@ module.exports = {
         exclude: /(node_modules)/,
         loader: 'eslint-loader',
         options: {
-          // 自動修正させる
-          fix: true,
-          // eslintでエラーだしたらビルドを中断する
-          failOnError: true,
-        },
+          fix: false,
+          failOnError: true
+        }
       },
       {
         test: /\.css$/,
