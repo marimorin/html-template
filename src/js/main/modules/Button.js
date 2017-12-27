@@ -25,7 +25,7 @@ export default class Button {
     this.target.toggleClass(this.className)
   }
 
-  setEventListener({ actionType: string, target: object, className: string }) {
+  setEventListener(actionType, target, className) {
     let handler = null
     this.target = $(target)
     this.className = className

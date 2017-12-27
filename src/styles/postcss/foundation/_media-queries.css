@@ -1,0 +1,6 @@
+@custom-media --tb91 only screen and (max-width: 910px);
+@custom-media --sp75 only screen and (max-width: 750px);
+@custom-media --sp64 only screen and (max-width: 640px);
+@custom-media --sp41 only screen and (max-width: 414px);
+@custom-media --sp32 only screen and (max-width: 320px);
+

@@ -18,8 +18,13 @@
 
 	<link rel="icon" type="image/vnd.microsoft.icon" href="https://www.google.com/favicon.ico">
 	<link rel="apple-touch-icon" href="https://www.google.com/apple-touch-icon.png">
-	<link rel="stylesheet" href="/assets/css/bundle.css">
-	<script src="/assets/js/bundle.js"></script>
+
+  <link rel="stylesheet" href="/assets/css/vendor.css">
+  <link rel="stylesheet" href="/assets/css/dev.css">
+  <!--<link rel="stylesheet" href="/assets/css/bundle.css">-->
+  <script src="/assets/js/vendor.js"></script>
+  <script src="/assets/js/dev.js"></script>
+  <!--<script src="/assets/js/bundle.js"></script>-->
 
 </head>
 <body>
@@ -69,6 +74,74 @@
 <div id="main">
 	<div class="main-in">
 		<div id="cont">
+
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h2 class="panel-title">ボタンを押して処理を実行する</h2>
+        </div>
+        <div class="panel-body">
+          <p>Console に計算結果を出力します。</p>
+          <form>
+            <div class="form-group">
+              <label for="inputNumber">整数</label>
+              <input type="text" class="form-control" id="inputNumber" placeholder="10" value="10">
+              <p class="help-block">二倍した値を出力します。</p>
+            </div>
+            <div class="form-group">
+              <label for="inputName">名前</label>
+              <input type="text" class="form-control" id="inputName" placeholder="聡太" value="聡太">
+              <p class="help-block">挨拶します。</p>
+            </div>
+            <button id="btnSubmit" type="button" class="btn btn-primary">ボタン</button>
+            <button id="btnClear" type="button" class="btn btn-default">クリア</button>
+          </form>
+          <p id="output1" style="display:none;"></p>
+          <p id="output2" style="display:none;"></p>
+        </div>
+      </div>
+
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h2 class="panel-title">Font Awesome のアイコンを表示する</h2>
+        </div>
+        <div class="panel-body">
+          <i class="fa fa-bus fa-3x" aria-hidden="true"></i>
+          <i class="fa fa-camera-retro fa-3x" aria-hidden="true"></i>
+          <i class="fa fa-cog fa-spin fa-3x fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <h2 class="panel-title">Bootstrap のモーダルを表示する</h2>
+          <i class="glyphicon glyphicon-pencil"></i>
+        </div>
+        <div class="panel-body">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+            モーダルを開きます
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h4 class="modal-title" id="myModalLabel">モーダル タイトル</h4>
+            </div>
+            <div class="modal-body">
+              [OK]ボタンを押しても何も起きません！
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
 <div class="ELM">
 <h1 class="ttl-main">Title Main</h1>

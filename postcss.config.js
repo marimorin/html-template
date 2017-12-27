@@ -1,9 +1,5 @@
 const PLUGINS = [
-  require('postcss-import')({
-    plugins: [
-      require('stylelint')
-    ]
-  }),
+  require('postcss-import'),
   require('autoprefixer')({
     browsers: 'last 2 versions'
   }),
@@ -11,13 +7,12 @@ const PLUGINS = [
   require('postcss-nested'),
   require('postcss-mixins'),
   require('postcss-simple-vars'),
-  // require('postcss-apply'),
   require('postcss-custom-media'),
   require('postcss-flexbugs-fixes'),
   require('postcss-sorting')
 ]
 module.exports = (ctx) => {
-  const IS_PROD = ctx.env === 'production'; // process.env.NODE_ENV
+  const IS_PROD = ctx.env === 'production'
   return {
     plugins: IS_PROD ? PLUGINS.concat([require('cssnano')]) : PLUGINS
   }
