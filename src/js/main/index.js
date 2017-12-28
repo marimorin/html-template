@@ -1,5 +1,5 @@
 let hoge = 10
-hoge = "hoge"
+hoge = "fuga"
 console.log(hoge)
 
 // import Button from './modules/Button'

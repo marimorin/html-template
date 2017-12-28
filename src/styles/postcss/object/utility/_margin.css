@@ -1,0 +1,26 @@
+@for $i from -5 to 20 {
+  $val: calc($i * 5);
+  .u-mt$(val) { margin-top: $(val)px !important; }
+  .u-mr$(val) { margin-right: $(val)px !important; }
+  .u-mb$(val) { margin-bottom: $(val)px !important; }
+  .u-ml$(val) { margin-left: $(val)px !important; }
+  .u-pt$(val) { padding-top: $(val)px !important; }
+  .u-pr$(val) { padding-right: $(val)px !important; }
+  .u-pb$(val) { padding-bottom: $(val)px !important; }
+  .u-pl$(val) { padding-left: $(val)px !important; }
+}
+
+@media (--sp75) {
+  @for $i from -5 to 20 {
+    $val: calc($i * 5);
+    .u-sp-mt$(val) { margin-top: $(val)px !important; }
+    .u-sp-mr$(val) { margin-right: $(val)px !important; }
+    .u-sp-mb$(val) { margin-bottom: $(val)px !important; }
+    .u-sp-ml$(val) { margin-left: $(val)px !important; }
+    .u-sp-pt$(val) { padding-top: $(val)px !important; }
+    .u-sp-pr$(val) { padding-right: $(val)px !important; }
+    .u-sp-pb$(val) { padding-bottom: $(val)px !important; }
+    .u-sp-pl$(val) { padding-left: $(val)px !important; }
+  }
+}
+

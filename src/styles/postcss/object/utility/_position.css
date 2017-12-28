@@ -1,0 +1,4 @@
+.u-pos-s { position: static; }
+.u-pos-a { position: absolute; }
+.u-pos-r { position: relative; }
+.u-pos-f { position: fixed; }

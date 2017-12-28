@@ -21,5 +21,15 @@
 /* import project */
 
 /* import utility */
+@import "object/utility/_margin";
+@import "object/utility/_align";
+@import "object/utility/_clearfix";
+@import "object/utility/_position";
+@import "object/utility/_size";
+@import "object/utility/_text";
 
-body { background: blue; }
+body { background: goldenrod; }
+
+.Toolbar {
+  @apply --toolbar-theme;
+}

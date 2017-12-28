@@ -1,7 +1,16 @@
 const webpack = require('webpack')
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
-const WebpackDelPlugin = require('webpack-del-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const DIST_DIR = `${__dirname}/public/assets/`
+
+let pathsToClean = [
+  `${DIST_DIR}css`,
+  `${DIST_DIR}js`,
+]
+
+let cleanOptions = {
+  exclude:  []
+}
 
 module.exports = [
   {
@@ -26,7 +35,7 @@ module.exports = [
     plugins: [
       new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV) }),
       new webpack.ProvidePlugin({ jQuery: "jquery", $: "jquery" }),
-      new WebpackDelPlugin({match: `${DIST_DIR}js/*.*`}),
+      new CleanWebpackPlugin(pathsToClean, cleanOptions),
       new webpack.optimize.UglifyJsPlugin({ sourceMap: true })
     ]
   },
@@ -69,7 +78,6 @@ module.exports = [
       ]
     },
     plugins: [
-      new WebpackDelPlugin({match: `${DIST_DIR}css/*.*`}),
       new ExtractTextPlugin('css/[name].css')
     ]
   }
