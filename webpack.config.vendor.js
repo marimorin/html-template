@@ -1,19 +1,19 @@
 const webpack = require('webpack')
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
-const outputPath = `${__dirname}/public/assets/`
+const DIST_DIR = `${__dirname}/public/assets/`
 
 module.exports = [
   {
-    entry: { vendor: './src/js/vendor/index.js' },
-    output: { path: outputPath, filename: 'js/[name].js' },
+    entry: { "dev-vendor": './src/js/vendor/index.js' },
+    output: { path: DIST_DIR, filename: 'js/[name].js' },
     plugins: [
       new webpack.ProvidePlugin({ jQuery: "jquery", $: "jquery" }),
       new webpack.optimize.UglifyJsPlugin()
     ]
   },
   {
-    entry: { vendor: './src/styles/vendor/index.scss' },
-    output: { path: outputPath, filename: 'css/[name].css' },
+    entry: { "dev-vendor": './src/styles/vendor/index.scss' },
+    output: { path: DIST_DIR, filename: 'css/[name].css' },
     module: {
       rules: [
         {

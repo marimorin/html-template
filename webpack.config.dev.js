@@ -1,12 +1,11 @@
-const webpack = require('webpack');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-const outputPath = `${__dirname}/public/assets/`
+const webpack = require('webpack')
+const ExtractTextPlugin = require("extract-text-webpack-plugin")
+const DIST_DIR = `${__dirname}/public/assets/`
 
 module.exports = [
   {
-    entry: { dev: [ 'babel-polyfill', './src/js/main/index.js' ] },
-    output: { path: outputPath, filename: 'js/[name].js' },
+    entry: { "dev-index": [ 'babel-polyfill', './src/js/main/index.js' ] },
+    output: { path: DIST_DIR, filename: 'js/[name].js' },
     module: {
       rules: [
         {
@@ -16,20 +15,18 @@ module.exports = [
             loader: 'babel-loader',
             options: {
               presets: [
-                'flow',
                 ['env', { 'modules': false }]
-              ],
-              plugins: ['transform-flow-strip-types']
+              ]
             }
           }]
         },
-        // {
-        //   enforce: "pre",
-        //   test: /\.js$/,
-        //   exclude: /node_modules/,
-        //   loader: "eslint-loader",
-        //   options: {}
-        // }
+        {
+          enforce: "pre",
+          test: /\.js$/,
+          exclude: /node_modules/,
+          loader: "eslint-loader",
+          options: {}
+        }
       ]
     },
     plugins: [
@@ -38,8 +35,8 @@ module.exports = [
     ]
   },
   {
-    entry: { dev: './src/styles/postcss/index.css' },
-    output: { path: outputPath, filename: 'css/[name].css' },
+    entry: { "dev-index": './src/styles/postcss/index.css' },
+    output: { path: DIST_DIR, filename: 'css/[name].css' },
     devtool: 'inline-source-map',
     module: {
       rules: [

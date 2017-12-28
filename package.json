@@ -51,6 +51,7 @@
     "stylelint-config-standard": "^18.0.0",
     "url-loader": "^0.6.2",
     "webpack": "^3.10.0",
+    "webpack-del-plugin": "^0.0.2",
     "webpack-dev-server": "^2.9.7"
   },
   "dependencies": {

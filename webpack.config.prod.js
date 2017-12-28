@@ -1,11 +1,12 @@
-const webpack = require('webpack');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const outputPath = `${__dirname}/public/assets/`
+const webpack = require('webpack')
+const ExtractTextPlugin = require("extract-text-webpack-plugin")
+const WebpackDelPlugin = require('webpack-del-plugin')
+const DIST_DIR = `${__dirname}/public/assets/`
 
 module.exports = [
   {
     entry: { bundle: [ 'babel-polyfill', './src/js/vendor/index.js', './src/js/main/index.js' ] },
-    output: { path: outputPath, filename: 'js/[name].js' },
+    output: { path: DIST_DIR, filename: 'js/[name].js' },
     module: {
       rules: [
         {
@@ -25,12 +26,13 @@ module.exports = [
     plugins: [
       new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV) }),
       new webpack.ProvidePlugin({ jQuery: "jquery", $: "jquery" }),
+      new WebpackDelPlugin({match: `${DIST_DIR}js/*.*`}),
       new webpack.optimize.UglifyJsPlugin({ sourceMap: true })
     ]
   },
   {
     entry: { bundle: ['./src/styles/vendor/index.scss', './src/styles/postcss/index.css'] },
-    output: { path: outputPath, filename: 'css/[name].css' },
+    output: { path: DIST_DIR, filename: 'css/[name].css' },
     devtool: 'inline-source-map',
     module: {
       rules: [
@@ -67,6 +69,7 @@ module.exports = [
       ]
     },
     plugins: [
+      new WebpackDelPlugin({match: `${DIST_DIR}css/*.*`}),
       new ExtractTextPlugin('css/[name].css')
     ]
   }
