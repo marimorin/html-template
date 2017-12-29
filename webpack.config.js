@@ -9,12 +9,12 @@ const cleanOptions = { exclude:  [] }
 let entry = {}
 let plugins = [
   new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'dev') }),
-  new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
-  new ExtractTextPlugin('css/[name].css')
+  plugins.push(new webpack.optimize.UglifyJsPlugin({ sourceMap: true })),
+  new ExtractTextPlugin({ filename: "css/[name].css" })
 ]
 
 switch (process.env.NODE_ENV) {
-  case "prod":
+  case "production":
     entry = { bundle: ['./src/js/vendor/index.js', './src/js/main/index.js', './src/js/app/index.js'] }
     plugins.push(new webpack.ProvidePlugin({ jQuery: "jquery", $: "jquery" }))
     plugins.push(new CleanWebpackPlugin(pathsToClean, cleanOptions))
@@ -23,18 +23,20 @@ switch (process.env.NODE_ENV) {
     entry = { "dev-vendor": './src/js/vendor/index.js' }
     plugins.push(new webpack.ProvidePlugin({ jQuery: "jquery", $: "jquery" }))
     break
-  case "dev":
+  case "development":
     entry = { "dev-index": [ 'babel-polyfill', './src/js/main/index.js' ] }
+    plugins.push(new webpack.HotModuleReplacementPlugin())
     break
-  case "app":
-    entry = { app: [ './src/js/app/index.js' ] }
+  case "application":
+    entry = { "dev-app": [ './src/js/app/index.js' ] }
+    plugins.push(new webpack.HotModuleReplacementPlugin())
     break
   default: break
 }
 
 module.exports = {
   entry: entry,
-  output: { path: DIST_DIR, filename: 'js/[name].js' },
+  output: { path: `${DIST_DIR}`, filename: 'js/[name].js', publicPath: "/assets/" },
   module: {
     rules: [
       {
@@ -89,6 +91,14 @@ module.exports = {
     ]
   },
   devtool: process.env.NODE_ENV === 'vendor' ? false : 'inline-source-map',
+  devServer: {
+    contentBase: `${__dirname}/public`,
+    historyApiFallback: true,
+    inline: true,
+    hot: true,
+    open: true,
+    port: 3030
+  },
   plugins: plugins
 }
 
