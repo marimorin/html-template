@@ -1,3 +1,5 @@
+import '../../styles/postcss/index.css'
+
 let hoge = 10
 hoge = "fuga"
 console.log(hoge)

@@ -4,6 +4,7 @@ module.exports = {
     "sourceType": "module"
   },
   "extends": "eslint:recommended",
+  "plugins": ["react"],
   "rules": {
     "strict": "warn",
     "no-undef": "warn",
