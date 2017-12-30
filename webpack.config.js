@@ -9,7 +9,6 @@ const cleanOptions = { exclude:  [] }
 let entry = {}
 let plugins = [
   new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'dev') }),
-  plugins.push(new webpack.optimize.UglifyJsPlugin({ sourceMap: true })),
   new ExtractTextPlugin({ filename: "css/[name].css" })
 ]
 
@@ -18,10 +17,12 @@ switch (process.env.NODE_ENV) {
     entry = { bundle: ['./src/js/vendor/index.js', './src/js/main/index.js', './src/js/app/index.js'] }
     plugins.push(new webpack.ProvidePlugin({ jQuery: "jquery", $: "jquery" }))
     plugins.push(new CleanWebpackPlugin(pathsToClean, cleanOptions))
+    plugins.push(new webpack.optimize.UglifyJsPlugin({ sourceMap: true }))
     break
   case "vendor":
     entry = { "dev-vendor": './src/js/vendor/index.js' }
     plugins.push(new webpack.ProvidePlugin({ jQuery: "jquery", $: "jquery" }))
+    plugins.push(new webpack.optimize.UglifyJsPlugin({ sourceMap: true }))
     break
   case "development":
     entry = { "dev-index": [ 'babel-polyfill', './src/js/main/index.js' ] }
