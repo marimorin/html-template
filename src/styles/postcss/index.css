@@ -28,7 +28,7 @@
 @import "object/utility/_size";
 @import "object/utility/_text";
 
-body { background: blue; }
+body { background: olive; }
 
 .Toolbar {
   @apply --toolbar-theme;

@@ -9,28 +9,38 @@ const cleanOptions = { exclude:  [] }
 let entry = {}
 let plugins = [
   new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'dev') }),
-  new ExtractTextPlugin({ filename: "css/[name].css" })
 ]
 
 switch (process.env.NODE_ENV) {
   case "production":
     entry = { bundle: ['./src/js/vendor/index.js', './src/js/main/index.js', './src/js/app/index.js'] }
-    plugins.push(new webpack.ProvidePlugin({ jQuery: "jquery", $: "jquery" }))
-    plugins.push(new CleanWebpackPlugin(pathsToClean, cleanOptions))
-    plugins.push(new webpack.optimize.UglifyJsPlugin({ sourceMap: true }))
+    plugins = plugins.concat([
+      new webpack.ProvidePlugin({ jQuery: "jquery", $: "jquery" }),
+      new CleanWebpackPlugin(pathsToClean, cleanOptions),
+      new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
+      new ExtractTextPlugin({ filename: "css/[name].css" })
+    ])
     break
   case "vendor":
     entry = { "dev-vendor": './src/js/vendor/index.js' }
-    plugins.push(new webpack.ProvidePlugin({ jQuery: "jquery", $: "jquery" }))
-    plugins.push(new webpack.optimize.UglifyJsPlugin({ sourceMap: true }))
+    plugins = plugins.concat([
+      new webpack.ProvidePlugin({ jQuery: "jquery", $: "jquery" }),
+      new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
+      new ExtractTextPlugin({ filename: "css/[name].css" })
+    ])
     break
   case "development":
     entry = { "dev-index": [ 'babel-polyfill', './src/js/main/index.js' ] }
-    plugins.push(new webpack.HotModuleReplacementPlugin())
+    plugins = plugins.concat([
+      new webpack.HotModuleReplacementPlugin(),
+      new ExtractTextPlugin({ filename: "css/[name].css" })
+    ])
     break
   case "application":
     entry = { "dev-app": [ './src/js/app/index.js' ] }
-    plugins.push(new webpack.HotModuleReplacementPlugin())
+    plugins = plugins.concat([
+      new webpack.HotModuleReplacementPlugin()
+    ])
     break
   default: break
 }
@@ -81,17 +91,24 @@ module.exports = {
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
+        use: process.env.NODE_ENV === 'application'
+          ? [
+            { loader: 'style-loader', options: { sourceMap: true } },
             { loader: 'css-loader', options: { sourceMap: true } },
             { loader: 'postcss-loader', options: { sourceMap: true } }
           ]
-        })
+          : ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: [
+              { loader: 'css-loader', options: { sourceMap: true } },
+              { loader: 'postcss-loader', options: { sourceMap: true } }
+            ]
+          })
       }
     ]
   },
-  devtool: process.env.NODE_ENV === 'vendor' ? false : 'inline-source-map',
+  devtool: 'inline-source-map',
+  // devtool: process.env.NODE_ENV === 'vendor' ? false : 'inline-source-map',
   devServer: {
     contentBase: `${__dirname}/public`,
     historyApiFallback: true,
