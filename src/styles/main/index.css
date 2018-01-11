@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+/* import normalize (bootstrap) */
+/*@import "../../../node_modules/normalize.css/normalize";*/
+
+/* import vars */
+@import "core/vars/*";
+
+/* import media-queries */
+@import "core/media-queries/*";
+
+/* import mixins */
+@import "core/mixins/*";
+
+/* import bases */
+@import "bases/*";
+
+/* import atoms */
+@import "atoms/*";
+
+/* import molecules */
+@import "molecules/*";
+
+/* import organisms */
+@import "organisms/*";
+
+/* import pages */
+@import "pages/*";
+
+/* import templates */
+@import "templates/*";
+
+/* import utils */
+@import "utils/*";
+

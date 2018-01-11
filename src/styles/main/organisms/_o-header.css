@@ -1,10 +1,10 @@
-#l-header {
+#o-header {
   @apply --bg-color--main;
   flex-grow:0;
   .l-content {
     @mixin flex-j-a space-between, center;
-    .c-header-logo { }
-    .c-header-nav { }
+    .a-logo--header { }
+    .m-nav--header { }
   }
 }
 

@@ -1,5 +1,5 @@
-.c-header-nav {
-  .c-header-nav__list {
+.o-nav--header {
+  .o-nav--header__list {
     display: flex;
     li {
       a {

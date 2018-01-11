@@ -1,4 +1,4 @@
-import '../../styles/postcss/index.css'
+import '../../styles/main/index.css'
 
 let hoge = 10
 hoge = "hoge"

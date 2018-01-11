@@ -1,8 +1,4 @@
-.l-container {
-  width: 100%;
-  @mixin flex-j center;
-}
-.l-content {
+.t-content {
   width: var(--width--per_xl);
   max-width: var(--width--lg);
   padding: 0 15px;
