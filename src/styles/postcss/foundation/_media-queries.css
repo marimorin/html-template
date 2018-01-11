@@ -1,6 +1,13 @@
-@custom-media --tb91 only screen and (max-width: 910px);
-@custom-media --sp75 only screen and (max-width: 750px);
-@custom-media --sp64 only screen and (max-width: 640px);
-@custom-media --sp41 only screen and (max-width: 414px);
-@custom-media --sp32 only screen and (max-width: 320px);
+@custom-media --xl (min-width: 1200px);
+@custom-media --lg (min-width: 992px);
+@custom-media --md (min-width: 768px);
+@custom-media --sm (min-width: 576px);
+@custom-media --xs (max-width: 575px);
 
+@custom-media --xl-max (max-width: 1199px);
+@custom-media --lg-max (max-width: 991px);
+@custom-media --md-max (max-width: 767px);
+
+@custom-media --lg-only (min-width: 992px) and (max-width: 1199px);
+@custom-media --md-only (min-width: 768px) and (max-width: 991px);
+@custom-media --sm-only (min-width: 576px) and (max-width: 767px);

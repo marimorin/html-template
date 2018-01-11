@@ -1,3 +1,2 @@
-header {
-  background: tomato;
-}
+#l-main { flex-grow: 1; @apply --bg-color--base; }
+/*#cont { width: calc(100% - var(--maxWidthSide) + 30px); flex-grow: 1; background: var(--baseColor); margin-right: 30px; }*/

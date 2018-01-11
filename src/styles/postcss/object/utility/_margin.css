@@ -10,7 +10,7 @@
   .u-pl$(val) { padding-left: $(val)px !important; }
 }
 
-@media (--sp75) {
+@media (--md-max) {
   @for $i from -5 to 20 {
     $val: calc($i * 5);
     .u-sp-mt$(val) { margin-top: $(val)px !important; }

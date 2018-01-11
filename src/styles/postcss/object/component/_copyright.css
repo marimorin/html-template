@@ -1,0 +1,6 @@
+.c-copyright {
+  @apply --txt-color--white;
+  @mixin flex-j-a center, center;
+  height:30px;
+}
+

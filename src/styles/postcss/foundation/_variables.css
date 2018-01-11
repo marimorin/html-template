@@ -1,22 +1,38 @@
 :root {
-  --fontFamily: Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-  --baseColor: #eaeae0;
-  --baseColorRGB: rgba(234, 234, 224, 1);
-  --baseColorRGBA0: rgba(234, 234, 224, 0);
-  --mainColor: #00336d;
-  --mainColorRGB: rgba(0, 51, 109, 1);
-  --mainColorRGBA0: rgba(0, 51, 109, 0);
-  --accentColor: #4d9be8;
-  --accentColorRGB: rgba(77, 155, 232, 1);
-  --accentColorRGBA0: rgba(77, 155, 232, 0);
-  --whiteColor: #fff;
-  --whiteColorRGB: rgba(255, 255, 255, 1);
-  --whiteColorRGBA0: rgba(255, 255, 255, 0);
-  --maxWidth: 1000px;
-  --maxWidthSide: 200px;
-  --toolbar-theme: {
-    background-color: rebeccapurple;
-    color: white;
-    border: 1px solid green;
-  };
+  --font-family--gothic: Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+
+  --font-size--xl: 2.4rem;
+  --font-size--lg: 1.8rem;
+  --font-size--md: 1.4rem;
+  --font-size--sm: 1.2rem;
+  --font-size--xs: 1.0rem;
+
+  --color--base: #eaeae0;
+  --color--main: #00336d;
+  --color--accent: #4d9be8;
+  --color--white: #fff;
+  --color--text: #333;
+  --color--link: #666;
+
+  --width--xl: 1200px;
+  --width--lg: 992px;
+  --width--md: 768px;
+  --width--sm: 576px;
+  --width--per_xl: 95%;
+
+  --bg-color--base: { background-color: var(--color--base); };
+  --bg-color--main: { background-color: var(--color--main); };
+  --bg-color--accent: { background-color: var(--color--accent); };
+  --bg-color--white: { background-color: var(--color--white); };
+
+  --txt-color--base: { color: var(--color--base); };
+  --txt-color--main: { color: var(--color--main); };
+  --txt-color--accent: { color: var(--color--accent); };
+  --txt-color--white: { color: var(--color--white); };
+
+  --fs--xl: { font-size: var(--font-size--xl); };
+  --fs--lg: { font-size: var(--font-size--lg); };
+  --fs--md: { font-size: var(--font-size--md); };
+  --fs--sm: { font-size: var(--font-size--sm); };
+  --fs--xs: { font-size: var(--font-size--xs); };
 }

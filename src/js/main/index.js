@@ -1,7 +1,7 @@
 import '../../styles/postcss/index.css'
 
 let hoge = 10
-hoge = "fuga"
+hoge = "hoge"
 console.log(hoge)
 
 // import Button from './modules/Button'

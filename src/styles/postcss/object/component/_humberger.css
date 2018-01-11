@@ -1,4 +1,5 @@
-#btn-humberger {
+.c-humberger {
+  /*
   a { width: 45px; height: 45px; display: flex; justify-content: center; align-items: center; outline: none;
     i { display: block; width: 100%; height: 3px; background: var(--mainColorRGB); position: relative; transition: background .4s, transform .4s; border-radius: 3px; margin: 0 7px;
       &::before,
@@ -9,11 +10,12 @@
       body.OPEN_SlideMenu & { background: var(--mainColorRGBA0);
         &::before { transform: translateY(0) rotate(-315deg); }
         &::after { transform: translateY(0) rotate(315deg); }
-      //transform: translateY(0) rotate(360deg);
-      //&::before { transform: translateY(0) rotate(-45deg); }
-      //&::after { transform: translateY(0) rotate(45deg); }
+        transform: translateY(0) rotate(360deg);
+        &::before { transform: translateY(0) rotate(-45deg); }
+        &::after { transform: translateY(0) rotate(45deg); }
       }
     }
   }
+  */
 }
 

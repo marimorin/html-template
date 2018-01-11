@@ -1,0 +1,13 @@
+.c-header-nav {
+  .c-header-nav__list {
+    display: flex;
+    li {
+      a {
+        @apply --txt-color--white;
+        @mixin flex-j-a center, center;
+        flex-grow: 1;
+        padding: 3px 10px;
+      }
+    }
+  }
+}

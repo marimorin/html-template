@@ -1,5 +1,5 @@
 const PLUGINS = [
-  require('postcss-import'),
+  require('postcss-easy-import')({glob: true}),
   require('autoprefixer')({
     browsers: 'last 2 versions'
   }),

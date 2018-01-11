@@ -1,4 +1,35 @@
-@define-mixin test {
-  display: block;
+@define-mixin flex-j $justify-content {
+  display: flex;
+  justify-content: $justify-content;
+}
+
+@define-mixin flex-a $align-items {
+  display: flex;
+  align-items: $align-items;
+}
+
+@define-mixin flex-j-a $justify-content, $align-items {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@define-mixin flex-j-d $justify-content, $direction {
+  display: flex;
+  justify-content: $justify-content;
+  flex-direction: $direction;
+}
+
+@define-mixin flex-j-a-d $justify-content, $align-items, $direction {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $direction;
+}
+
+@define-mixin flex-a-d $align-items, $direction {
+  display: flex;
+  align-items: $align-items;
+  flex-direction: $direction;
 }
 

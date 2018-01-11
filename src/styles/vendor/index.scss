@@ -1,7 +1,11 @@
 @charset "UTF-8";
-$fa-font-path: "../../../node_modules/font-awesome/fonts/";
+
+/* import bootstrap */
 $icon-font-path: "../../../node_modules/bootstrap-sass/assets/fonts/bootstrap/";
 $brand-primary: olive;
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap";
+
+/* import awesome */
+$fa-font-path: "../../../node_modules/font-awesome/fonts/";
 @import "../../../node_modules/font-awesome/scss/font-awesome";
 

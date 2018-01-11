@@ -1,5 +1,1 @@
-.u-cfix::after {
-  content: "";
-  display: block;
-  clear: both;
-}
+.u-cfix::after { content: ""; display: block; clear: both; }

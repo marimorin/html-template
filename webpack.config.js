@@ -36,7 +36,20 @@ switch (process.env.NODE_ENV) {
       new ExtractTextPlugin({ filename: "css/[name].css" })
     ])
     break
+  case "hot-development":
+    entry = { "dev-index": [ 'babel-polyfill', './src/js/main/index.js' ] }
+    plugins = plugins.concat([
+      new webpack.HotModuleReplacementPlugin()
+    ])
+    break
   case "application":
+    entry = { "dev-app": [ './src/js/app/index.js' ] }
+    plugins = plugins.concat([
+      new webpack.HotModuleReplacementPlugin(),
+      new ExtractTextPlugin({ filename: "css/[name].css" })
+    ])
+    break
+  case "hot-application":
     entry = { "dev-app": [ './src/js/app/index.js' ] }
     plugins = plugins.concat([
       new webpack.HotModuleReplacementPlugin()
@@ -91,7 +104,7 @@ module.exports = {
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        use: process.env.NODE_ENV === 'application'
+        use: process.env.NODE_ENV === 'application' || process.env.NODE_ENV === 'development'
           ? [
             { loader: 'style-loader', options: { sourceMap: true } },
             { loader: 'css-loader', options: { sourceMap: true } },

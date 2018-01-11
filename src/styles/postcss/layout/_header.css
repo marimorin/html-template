@@ -1,18 +1,10 @@
-#header { display: flex; justify-content: center; position: relative; background: var(--baseColor); z-index: 100;
-  .header-in { display: flex; align-items: center; width: var(--maxWidth); margin: 0 20px;
-    .header-logo { flex-grow: 0;
-      h1 { color: var(--mainColor); font-size: 30px; font-weight: bold; }
-    }
-    .header-nav { flex-grow: 1;
-      ul { display: flex; justify-content: flex-end; margin-right: 10px;
-        li { margin: 0 10px;
-          a { color: var(--mainColor); }
-        }
-      }
-    }
-    #btn-humberger {
-      flex-grow: 0;
-    }
+#l-header {
+  @apply --bg-color--main;
+  flex-grow:0;
+  .l-content {
+    @mixin flex-j-a space-between, center;
+    .c-header-logo { }
+    .c-header-nav { }
   }
 }
 

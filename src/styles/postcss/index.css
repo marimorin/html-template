@@ -1,35 +1,22 @@
 @charset "UTF-8";
 
+/* import normalize (bootstrap) */
+/*@import "../../../node_modules/normalize.css/normalize";*/
+
 /* import foundation */
-@import "foundation/_variables";
-@import "foundation/_mixins";
-@import "foundation/_media-queries";
-@import "../../../node_modules/normalize.css/normalize";
-@import "foundation/_base";
+@import "foundation/_imports";
 
 /* import layout */
-@import "layout/_header";
-@import "layout/_gnav";
-@import "layout/_main";
-@import "layout/_sidebar";
-@import "layout/_footer";
+@import "layout/_imports";
 
-/* import component */
-@import "object/component/_slide-menu";
-@import "object/component/_btn-humberger";
+/* import object/component */
+@import "object/component/_imports";
 
-/* import project */
+/* import object/project */
+@import "object/project/_imports";
 
-/* import utility */
-@import "object/utility/_margin";
-@import "object/utility/_align";
-@import "object/utility/_clearfix";
-@import "object/utility/_position";
-@import "object/utility/_size";
-@import "object/utility/_text";
+/* import object/utility */
+@import "object/utility/_imports";
 
-body { background: olive; }
 
-.Toolbar {
-  @apply --toolbar-theme;
-}
+
