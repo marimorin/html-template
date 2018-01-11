@@ -30,22 +30,39 @@
   <div class="t-content">
 
     <div class="a-logo--header">
-     <a href="/">Will STYLE</a>
+     <a class="a-logo--header__link" href="/">HOGE STYLE</a>
     </div><!-- /.a-logo--header -->
 
     <nav class="m-nav--header">
       <ul class="m-nav--header__list">
-        <li><a href="#">Greeting</a></li>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Legal</a></li>
+        <li class="m-nav--header__item"><a class="m-nav--header__link" href="#">Greeting</a></li>
+        <li class="m-nav--header__item"><a class="m-nav--header__link" href="#">Privacy</a></li>
+        <li class="m-nav--header__item"><a class="m-nav--header__link" href="#">Legal</a></li>
       </ul><!-- /.m-nav--header__list -->
     </nav><!-- /.m-nav--header -->
+
+    <div class="a-humberger">
+      <a href="#" id="js-humberger" class="a-humberger__btn" aria-expanded="false" aria-controls="js-drawer" role="button"><i></i></a>
+    </div>
+
+    <div id="js-drawer" class="o-drawer" role="navigation" aria-hidden="true" aria-labelledby="js-humberger">
+      <div class="o-drawer__nav">
+        <ul class="o-drawer__list">
+          <li class="o-drawer__item"><a href="#" class="o-drawer__link o-drawer__link--company">HOME</a></li>
+          <li class="o-drawer__item"><a href="#" class="o-drawer__link o-drawer__link--company">ABOUT</a></li>
+          <li class="o-drawer__item"><a href="#" class="o-drawer__link o-drawer__link--company">SERVICE</a></li>
+          <li class="o-drawer__item"><a href="#" class="o-drawer__link o-drawer__link--company">PRODUCTS</a></li>
+          <li class="o-drawer__item"><a href="#" class="o-drawer__link o-drawer__link--company">CAMPAIGN</a></li>
+          <li class="o-drawer__item"><a href="#" class="o-drawer__link o-drawer__link--company">CONTACT</a></li>
+        </ul>
+      </div><!-- /.o-drawer__nav -->
+    </div><!-- /#drawer-nav -->
 
   </div><!-- /.t-content -->
 </header><!-- /#o-header -->
 
 <nav id="o-gnav" class="t-container">
-  <ul class="t-content">
+  <ul class="o-gnav__list t-content">
     <li class="o-gnav__item"><a class="o-gnav__link o-gnav__link--home" href="#">HOME</a></li>
     <li class="o-gnav__item"><a class="o-gnav__link o-gnav__link--about" href="#">ABOUT</a></li>
     <li class="o-gnav__item"><a class="o-gnav__link o-gnav__link--service" href="#">SERVICE</a></li>
@@ -55,17 +72,17 @@
   </ul><!-- /.t-content -->
 </nav><!-- /#o-gnav -->
 
-<div id="o-main" class="t-container">
+<main id="o-main" class="t-container">
   <div class="t-content">
 
   </div><!-- /.t-content -->
-</div><!-- /#o-main -->
+</main><!-- /#o-main -->
 
 <div id="o-footer" class="t-container">
   <div class="t-content">
-    <div class="c-copyright">
+    <div class="a-copyright">
       <small>(C) Copyrights. All Rights Reserved.</small>
-    </div><!-- /.c-copyright -->
+    </div>
   </div><!-- /.t-content -->
 </div><!-- /#o-footer -->
 

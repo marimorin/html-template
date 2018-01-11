@@ -1,8 +1,8 @@
-.o-nav--header {
-  .o-nav--header__list {
+.m-nav--header {
+  .m-nav--header__list {
     display: flex;
-    li {
-      a {
+    li.m-nav--header__item {
+      a.m-nav--header__link {
         @apply --txt-color--white;
         @mixin flex-j-a center, center;
         flex-grow: 1;
