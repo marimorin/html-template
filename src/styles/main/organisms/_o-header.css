@@ -1,10 +1,18 @@
 #o-header {
   @apply --bg-color--main;
   flex-grow:0;
-  .l-content {
-    @mixin flex-j-a space-between, center;
-    .a-logo--header { }
-    .m-nav--header { }
+  .t-content {
+    display: flex;
+    .a-logo--header {
+      flex-grow: 0;
+    }
+    .m-nav--header {
+      flex-grow: 1;
+      @mixin flex-j-a flex-end, center;
+    }
+    .a-humberger {
+      flex-grow: 0;
+    }
   }
 }
 

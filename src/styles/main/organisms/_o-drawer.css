@@ -1,0 +1,24 @@
+.o-drawer {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: olive;
+  transform: translateX(100%);
+  transition: transform .3s ease-in-out;
+  &[aria-hidden="false"] {
+    transform: translateX(0);
+  }
+  nav.o-drawer__nav {
+    ul.o-drawer__list {
+      li.o-drawer__item {
+        border-bottom: solid 1px #fff;
+        a.o-drawer__link {
+          display: block;
+          padding: 5px 0;
+        }
+      }
+    }
+  }
+}
+
