@@ -1,13 +1,16 @@
-.m-nav--header {
-  .m-nav--header__list {
+.m-nav-header {
+  & &__list {
     display: flex;
-    li.m-nav--header__item {
-      a.m-nav--header__link {
-        @apply --txt-color--white;
-        @mixin flex-j-a center, center;
-        flex-grow: 1;
-        padding: 3px 10px;
-      }
-    }
+  }
+  & &__item {
+  }
+  & &__link {
+    @apply --color-txt--white;
+    @mixin flex-j-a center, center;
+    flex-grow: 1;
+    padding: 3px 10px;
+    &.--greeting { color: red; }
+    &.--privacy { color: gold; }
+    &.--legal { color: aqua; }
   }
 }

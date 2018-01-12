@@ -24,36 +24,38 @@
   <!--<link rel="stylesheet" href="/assets/css/bundle.css">-->
 
 </head>
-<body>
+<body class="--page_home">
 
 <header id="o-header" class="t-container" role="banner">
   <div class="t-content">
 
-    <div class="a-logo--header">
-     <a class="a-logo--header__link" href="/">HOGE STYLE</a>
+    <div class="a-logo-header">
+     <a class="a-logo-header__link" href="/">HOGE STYLE</a>
     </div><!-- /.a-logo--header -->
 
-    <nav class="m-nav--header">
-      <ul class="m-nav--header__list">
-        <li class="m-nav--header__item"><a class="m-nav--header__link" href="#">Greeting</a></li>
-        <li class="m-nav--header__item"><a class="m-nav--header__link" href="#">Privacy</a></li>
-        <li class="m-nav--header__item"><a class="m-nav--header__link" href="#">Legal</a></li>
-      </ul><!-- /.m-nav--header__list -->
-    </nav><!-- /.m-nav--header -->
+    <nav class="m-nav-header">
+      <ul class="m-nav-header__list">
+        <li class="m-nav-header__item"><a class="m-nav-header__link --greeting" href="#">Greeting</a></li>
+        <li class="m-nav-header__item"><a class="m-nav-header__link --privacy" href="#">Privacy</a></li>
+        <li class="m-nav-header__item"><a class="m-nav-header__link --legal" href="#">Legal</a></li>
+      </ul><!-- /.m-nav-header__list -->
+    </nav><!-- /.m-nav-header -->
 
-    <div class="a-humberger">
-      <a href="#" id="js-humberger" class="a-humberger__btn" aria-expanded="false" aria-controls="js-drawer" role="button"><i></i></a>
-    </div>
+    <button id="js-humberger" class="a-btn-humberger" aria-expanded="false" aria-controls="js-drawer">
+      <i class="a-btn-humberger__bar"></i>
+      <i class="a-btn-humberger__bar"></i>
+      <i class="a-btn-humberger__bar"></i>
+    </button>
 
     <div id="js-drawer" class="o-drawer" role="navigation" aria-hidden="true" aria-labelledby="js-humberger">
       <div class="o-drawer__nav">
         <ul class="o-drawer__list">
-          <li class="o-drawer__item"><a href="#" class="o-drawer__link o-drawer__link--company">HOME</a></li>
-          <li class="o-drawer__item"><a href="#" class="o-drawer__link o-drawer__link--company">ABOUT</a></li>
-          <li class="o-drawer__item"><a href="#" class="o-drawer__link o-drawer__link--company">SERVICE</a></li>
-          <li class="o-drawer__item"><a href="#" class="o-drawer__link o-drawer__link--company">PRODUCTS</a></li>
-          <li class="o-drawer__item"><a href="#" class="o-drawer__link o-drawer__link--company">CAMPAIGN</a></li>
-          <li class="o-drawer__item"><a href="#" class="o-drawer__link o-drawer__link--company">CONTACT</a></li>
+          <li class="o-drawer__item"><a href="#" class="o-drawer__link--home">HOME</a></li>
+          <li class="o-drawer__item"><a href="#" class="o-drawer__link--about">ABOUT</a></li>
+          <li class="o-drawer__item"><a href="#" class="o-drawer__link--service">SERVICE</a></li>
+          <li class="o-drawer__item"><a href="#" class="o-drawer__link--product">PRODUCTS</a></li>
+          <li class="o-drawer__item"><a href="#" class="o-drawer__link--campaign">CAMPAIGN</a></li>
+          <li class="o-drawer__item"><a href="#" class="o-drawer__link--contact">CONTACT</a></li>
         </ul>
       </div><!-- /.o-drawer__nav -->
     </div><!-- /#drawer-nav -->
@@ -61,14 +63,14 @@
   </div><!-- /.t-content -->
 </header><!-- /#o-header -->
 
-<nav id="o-gnav" class="t-container">
+<nav id="o-gnav" class="o-gnav t-container">
   <ul class="o-gnav__list t-content">
-    <li class="o-gnav__item"><a class="o-gnav__link o-gnav__link--home" href="#">HOME</a></li>
-    <li class="o-gnav__item"><a class="o-gnav__link o-gnav__link--about" href="#">ABOUT</a></li>
-    <li class="o-gnav__item"><a class="o-gnav__link o-gnav__link--service" href="#">SERVICE</a></li>
-    <li class="o-gnav__item"><a class="o-gnav__link o-gnav__link--products" href="#">PRODUCTS</a></li>
-    <li class="o-gnav__item"><a class="o-gnav__link o-gnav__link--campaign" href="#">CAMPAIGN</a></li>
-    <li class="o-gnav__item"><a class="o-gnav__link o-gnav__link--contact" href="#">CONTACT</a></li>
+    <li class="o-gnav__item"><a class="o-gnav__link --home" href="#">HOME</a></li>
+    <li class="o-gnav__item"><a class="o-gnav__link --about" href="#">ABOUT</a></li>
+    <li class="o-gnav__item"><a class="o-gnav__link --service" href="#">SERVICE</a></li>
+    <li class="o-gnav__item"><a class="o-gnav__link --products" href="#">PRODUCTS</a></li>
+    <li class="o-gnav__item"><a class="o-gnav__link --campaign" href="#">CAMPAIGN</a></li>
+    <li class="o-gnav__item"><a class="o-gnav__link --contact" href="#">CONTACT</a></li>
   </ul><!-- /.t-content -->
 </nav><!-- /#o-gnav -->
 

@@ -1,0 +1,15 @@
+:root {
+  --font-family--gothic: Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+
+  --font-size--xl: 2.4rem;
+  --font-size--lg: 1.8rem;
+  --font-size--md: 1.4rem;
+  --font-size--sm: 1.2rem;
+  --font-size--xs: 1.0rem;
+
+  --fs--xl: { font-size: var(--font-size--xl); };
+  --fs--lg: { font-size: var(--font-size--lg); };
+  --fs--md: { font-size: var(--font-size--md); };
+  --fs--sm: { font-size: var(--font-size--sm); };
+  --fs--xs: { font-size: var(--font-size--xs); };
+}

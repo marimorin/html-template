@@ -1,5 +1,5 @@
 .a-copyright {
-  @apply --txt-color--white;
+  @apply --color-txt--white;
   @mixin flex-j-a center, center;
   height:30px;
 }

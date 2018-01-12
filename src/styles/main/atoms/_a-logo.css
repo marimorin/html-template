@@ -1,6 +1,6 @@
-.a-logo--header {
+.a-logo-header {
   @apply --fs--xl;
   a {
-    @apply --txt-color--white;
+    @apply --color-txt--white;
   }
 }

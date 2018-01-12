@@ -1,5 +1,5 @@
 .t-container {
-  width: 100%;
   @mixin flex-j center;
+  width: 100%;
 }
 

@@ -1,14 +1,14 @@
 #o-header {
-  @apply --bg-color--main;
+  @apply --color-bg--main;
   flex-grow:0;
   .t-content {
     display: flex;
-    .a-logo--header {
+    .a-logo-header {
       flex-grow: 0;
     }
-    .m-nav--header {
-      flex-grow: 1;
+    .m-nav-header {
       @mixin flex-j-a flex-end, center;
+      flex-grow: 1;
     }
     .a-humberger {
       flex-grow: 0;

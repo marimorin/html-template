@@ -1,5 +1,40 @@
 .a-btn {
-  &--primary {
+  &.--primary {
     background: olive;
   }
 }
+
+.a-btn-humberger {
+  @mixin flex-j-a-d center, center, column;
+  width: 45px;
+  height: 45px;
+  outline: none;
+  border: none;
+  background: none;
+  padding: 0;
+  & &__bar {
+    @apply --color-bg--white;
+    display: block;
+    width: 26px;
+    height: 3px;
+    position: relative;
+    border-radius: 3px;
+    transition: all .4s;
+    &:first-of-type { transform: translateY(-7px) rotate(0deg); }
+    &:last-of-type { transform: translateY(7px) rotate(0deg); }
+  }
+  &[aria-expanded="true"] {
+    .a-btn-humberger__bar {
+      &:first-of-type { transform: translateY(3px) rotate(-315deg); }
+      &:nth-of-type(2) { opacity: 0; }
+      &:last-of-type { transform: translateY(-3px) rotate(315deg); }
+      /*
+		transform: translateY(0) rotate(360deg);
+		&:first-of-type { transform: translateY(3px) rotate(-45deg); }
+	  &:nth-of-type(2) { opacity: 0; }
+		&:last-of-type { transform: translateY(-3px) rotate(45deg); }
+		*/
+    }
+  }
+}
+

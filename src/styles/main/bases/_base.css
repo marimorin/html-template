@@ -32,9 +32,9 @@ html {
 }
 
 body {
-  min-height: 100%;
   @mixin flex-j-d strech, column;
   @apply --fs--md;
+  min-height: 100%;
   font-family: var(--font-family--gothic);
   line-height: 1.4;
   color: var(--color--text);

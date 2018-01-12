@@ -1,0 +1,18 @@
+:root {
+  --color--base: #eaeae0;
+  --color--main: #00336d;
+  --color--accent: #4d9be8;
+  --color--white: #fff;
+  --color--text: #333;
+  --color--link: #666;
+
+  --color-bg--base: { background-color: var(--color--base); };
+  --color-bg--main: { background-color: var(--color--main); };
+  --color-bg--accent: { background-color: var(--color--accent); };
+  --color-bg--white: { background-color: var(--color--white); };
+
+  --color-txt--base: { color: var(--color--base); };
+  --color-txt--main: { color: var(--color--main); };
+  --color-txt--accent: { color: var(--color--accent); };
+  --color-txt--white: { color: var(--color--white); };
+}

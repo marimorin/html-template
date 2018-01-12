@@ -1,5 +1,5 @@
 #o-footer {
-  @apply --bg-color--main;
+  @apply --color-bg--main;
   flex-grow: 0;
   .a-copyright { }
 }
