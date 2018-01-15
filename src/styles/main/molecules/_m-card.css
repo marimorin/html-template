@@ -1,0 +1,52 @@
+.m-card {
+  & &__wrapper-link {
+    display: block;
+  }
+  & &__image {
+    position: relative;
+    @mixin bg-p-s center center, cover;
+    margin-bottom: 10px;
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      padding-top: 62.5%;
+    }
+  }
+  & &__label {
+    @mixin flex-j-a center, center;
+    @apply --color-txt--white;
+    @apply --fs--sm;
+    padding: 3px 7px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    &--podcast { background: blueviolet; }
+  }
+  & &__body {
+
+  }
+  & &__title {
+    @apply --fs--lg;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  & &__content {
+    margin-bottom: 10px;
+  }
+  & &__meta {
+    @mixin flex-j-a center, center;
+    @apply --fs--sm;
+  }
+  & &__thumb {
+    @mixin bg-p-s top center, cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  & &__author {
+    margin-right: 5px;
+  }
+  & &__date {}
+}

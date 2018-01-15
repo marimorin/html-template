@@ -1,0 +1,6 @@
+@define-mixin bg-p-s $pos, $size {
+  background-repeat: no-repeat;
+  background-position: $pos;
+  background-size: $size;
+}
+

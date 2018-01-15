@@ -1,0 +1,8 @@
+.a-label {
+  @mixin flex-j-a center, center;
+  @apply --color-txt--white;
+  border-radius: .25em;
+  padding: 3px 7px;
+  &--md { @apply --fs--md; }
+  &--square { border-radius: 0; }
+}

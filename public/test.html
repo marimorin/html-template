@@ -19,12 +19,10 @@
 	<link rel="icon" type="image/vnd.microsoft.icon" href="https://www.google.com/favicon.ico">
 	<link rel="apple-touch-icon" href="https://www.google.com/apple-touch-icon.png">
 
-  <link rel="stylesheet" href="/assets/css/dev-vendor.css">
-  <link rel="stylesheet" href="/assets/css/dev-index.css">
-  <!--<link rel="stylesheet" href="/assets/css/bundle.css">-->
+  <link rel="stylesheet" href="/assets/css/bundle.css">
 
 </head>
-<body class="--page_home">
+<body class="p-front">
 
 <header id="o-header" class="t-container" role="banner">
   <div class="t-content">
@@ -35,9 +33,9 @@
 
     <nav class="m-nav-header">
       <ul class="m-nav-header__list">
-        <li class="m-nav-header__item"><a class="m-nav-header__link --greeting" href="#">Greeting</a></li>
-        <li class="m-nav-header__item"><a class="m-nav-header__link --privacy" href="#">Privacy</a></li>
-        <li class="m-nav-header__item"><a class="m-nav-header__link --legal" href="#">Legal</a></li>
+        <li class="m-nav-header__item"><a class="m-nav-header__link m-nav-header--greeting" href="#">Greeting</a></li>
+        <li class="m-nav-header__item"><a class="m-nav-header__link m-nav-header--privacy" href="#">Privacy</a></li>
+        <li class="m-nav-header__item"><a class="m-nav-header__link m-nav-header--legal" href="#">Legal</a></li>
       </ul><!-- /.m-nav-header__list -->
     </nav><!-- /.m-nav-header -->
 
@@ -47,51 +45,51 @@
       <i class="a-btn-humberger__bar"></i>
     </button>
 
-    <div id="js-drawer" class="o-drawer" role="navigation" aria-hidden="true" aria-labelledby="js-humberger">
-      <nav class="o-drawer__nav">
-        <ul class="o-drawer__list">
-          <li class="o-drawer__item"><a href="#" class="o-drawer__link --home">HOME</a></li>
-          <li class="o-drawer__item"><a href="#" class="o-drawer__link --about">ABOUT</a></li>
-          <li class="o-drawer__item"><a href="#" class="o-drawer__link --service">SERVICE</a></li>
-          <li class="o-drawer__item"><a href="#" class="o-drawer__link --product">PRODUCTS</a></li>
-          <li class="o-drawer__item"><a href="#" class="o-drawer__link --campaign">CAMPAIGN</a></li>
-          <li class="o-drawer__item"><a href="#" class="o-drawer__link --contact">CONTACT</a></li>
-        </ul>
-      </nav><!-- /.o-drawer__nav -->
-    </div><!-- /#drawer-nav -->
+    <nav id="js-drawer" class="m-drawer-global" role="navigation" aria-hidden="true" aria-labelledby="js-humberger">
+      <ul class="m-drawer-global__list">
+        <li class="m-drawer-global__item"><a href="#" class="m-drawer-global__link m-drawer-global__link--home">HOME</a></li>
+        <li class="m-drawer-global__item"><a href="#" class="m-drawer-global__link m-drawer-global__link--about">ABOUT</a></li>
+        <li class="m-drawer-global__item"><a href="#" class="m-drawer-global__link m-drawer-global__link--service">SERVICE</a></li>
+        <li class="m-drawer-global__item"><a href="#" class="m-drawer-global__link m-drawer-global__link--product">PRODUCTS</a></li>
+        <li class="m-drawer-global__item"><a href="#" class="m-drawer-global__link m-drawer-global__link--campaign">CAMPAIGN</a></li>
+        <li class="m-drawer-global__item"><a href="#" class="m-drawer-global__link m-drawer-global__link--contact">CONTACT</a></li>
+      </ul>
+    </nav><!-- /.drawer-global -->
 
   </div><!-- /.t-content -->
 </header><!-- /#o-header -->
 
-<nav id="o-gnav" class="o-gnav t-container">
-  <ul class="o-gnav__list t-content">
-    <li class="o-gnav__item"><a class="o-gnav__link --home" href="#">HOME</a></li>
-    <li class="o-gnav__item"><a class="o-gnav__link --about" href="#">ABOUT</a></li>
-    <li class="o-gnav__item"><a class="o-gnav__link --service" href="#">SERVICE</a></li>
-    <li class="o-gnav__item"><a class="o-gnav__link --products" href="#">PRODUCTS</a></li>
-    <li class="o-gnav__item"><a class="o-gnav__link --campaign" href="#">CAMPAIGN</a></li>
-    <li class="o-gnav__item"><a class="o-gnav__link --contact" href="#">CONTACT</a></li>
+<nav class="o-nav-global t-container" role="navigation">
+  <ul class="o-nav-global__list t-content">
+    <li class="o-nav-global__item"><a class="o-nav-global__link o-nav-global__link--home" href="#">HOME</a></li>
+    <li class="o-nav-global__item"><a class="o-nav-global__link o-nav-global__link--about" href="#">ABOUT</a></li>
+    <li class="o-nav-global__item"><a class="o-nav-global__link o-nav-global__link--service" href="#">SERVICE</a></li>
+    <li class="o-nav-global__item"><a class="o-nav-global__link o-nav-global__link--products" href="#">PRODUCTS</a></li>
+    <li class="o-nav-global__item"><a class="o-nav-global__link o-nav-global__link--campaign" href="#">CAMPAIGN</a></li>
+    <li class="o-nav-global__item"><a class="o-nav-global__link o-nav-global__link--contact" href="#">CONTACT</a></li>
   </ul><!-- /.t-content -->
-</nav><!-- /#o-gnav -->
+</nav><!-- /.o-nav-global -->
 
 <main id="o-main" class="t-container">
   <div class="t-content">
 
     <section class="p-front-recent">
-      <h2 class="p-front-title-main">Recent</h2>
+      <h2 class="a-title-front-main">Recent</h2>
+
       <div class="o-articles">
-        <ul class="o-articles__list">
+
+        <ul class="o-articles__list o-articles__list--grid3">
           <li class="o-articles__item">
             <article class="m-card">
               <a href="#" class="m-card__wrapper-link">
-                <div class="m-card__image">
-                  <span class="m-card__label">Podcast</span>
+                <div class="m-card__image" style="background-image: url('/assets/images/photo-1.jpg')">
+                  <span class="m-card__label m-card__label--podcast">Podcast</span>
                 </div>
                 <div class="m-card__body">
                   <h3 class="m-card__title">ポッドキャスト忘年会、2017年の振り返り</h3>
-                  <p class="m-card__content"></p>
+                  <p class="m-card__content">さて、前回の記事では前回の記事では前回の記事ではVVV前回の記事ではVue.JSの基本的な動作を管理画面で実装する例をお見せしたが、今回は次のような...</p>
                   <div class="m-card__meta">
-                    <div class="m-card__thumb"></div>
+                    <div class="m-card__thumb" style="background-image: url('/assets/images/author-1.png');"></div>
                     <div class="m-card__author">ほげ・たろう</div>
                     <div class="m-card__date"><time datetime="2018-01-18">2018年1月13日</time></div>
                   </div>
@@ -99,10 +97,147 @@
               </a>
             </article>
           </li>
-        </ul><!-- /.o-articles__list -->
+
+          <li class="o-articles__item">
+            <article class="m-card">
+              <a href="#" class="m-card__wrapper-link">
+                <div class="m-card__image" style="background-image: url('/assets/images/photo-2.jpg')">
+                  <span class="m-card__label m-card__label--podcast">Podcast</span>
+                </div>
+                <div class="m-card__body">
+                  <h3 class="m-card__title">ポッドキャスト忘年会、2017年の振り返り</h3>
+                  <p class="m-card__content">さて、前回の記事ではVue.JSの基本的な動作を管理画面で実装する例をお見せしたが、今回は次のような...</p>
+                  <div class="m-card__meta">
+                    <div class="m-card__thumb" style="background-image: url('/assets/images/author-1.png');"></div>
+                    <div class="m-card__author">ほげ・たろう</div>
+                    <div class="m-card__date"><time datetime="2018-01-18">2018年1月13日</time></div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </li>
+
+          <li class="o-articles__item">
+            <article class="m-card">
+              <a href="#" class="m-card__wrapper-link">
+                <div class="m-card__image" style="background-image: url('/assets/images/photo-3.jpg')">
+                  <span class="m-card__label m-card__label--podcast">Podcast</span>
+                </div>
+                <div class="m-card__body">
+                  <h3 class="m-card__title">ポッドキャスト忘年会、2017年の振り返り</h3>
+                  <p class="m-card__content">さて、前回の記事ではVue.JSの基本的な動作を管理画面で実装する例をお見せしたが、今回は次のような...</p>
+                  <div class="m-card__meta">
+                    <div class="m-card__thumb" style="background-image: url('/assets/images/author-1.png');"></div>
+                    <div class="m-card__author">ほげ・たろう</div>
+                    <div class="m-card__date"><time datetime="2018-01-18">2018年1月13日</time></div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </li>
+
+          <li class="o-articles__item">
+            <article class="m-card">
+              <a href="#" class="m-card__wrapper-link">
+                <div class="m-card__image" style="background-image: url('/assets/images/photo-4.jpg')">
+                  <span class="m-card__label m-card__label--podcast">Podcast</span>
+                </div>
+                <div class="m-card__body">
+                  <h3 class="m-card__title">ポッドキャスト忘年会、2017年の振り返り</h3>
+                  <p class="m-card__content">さて、前回の記事ではVue.JSの基本的な動作を管理画面で実装する例をお見せしたが、今回は次のような...</p>
+                  <div class="m-card__meta">
+                    <div class="m-card__thumb" style="background-image: url('/assets/images/author-1.png');"></div>
+                    <div class="m-card__author">ほげ・たろう</div>
+                    <div class="m-card__date"><time datetime="2018-01-18">2018年1月13日</time></div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </li>
+        </ul><!-- /.o-articles__list-->
+
+        <ul class="o-articles__list o-articles__list--grid4">
+          <li class="o-articles__item">
+            <article class="m-card">
+              <a href="#" class="m-card__wrapper-link">
+                <div class="m-card__image" style="background-image: url('/assets/images/photo-5.jpg')">
+                  <span class="m-card__label m-card__label--podcast">Podcast</span>
+                </div>
+                <div class="m-card__body">
+                  <h3 class="m-card__title">ポッドキャスト忘年会、2017年の振り返り</h3>
+                  <p class="m-card__content">さて、前回の記事ではVue.JSの基本的な動作を管理画面で実装する例をお見せしたが、今回は次のような...</p>
+                  <div class="m-card__meta">
+                    <div class="m-card__thumb" style="background-image: url('/assets/images/author-1.png');"></div>
+                    <div class="m-card__author">ほげ・たろう</div>
+                    <div class="m-card__date"><time datetime="2018-01-18">2018年1月13日</time></div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </li>
+
+          <li class="o-articles__item">
+            <article class="m-card">
+              <a href="#" class="m-card__wrapper-link">
+                <div class="m-card__image" style="background-image: url('/assets/images/photo-6.jpg')">
+                  <span class="m-card__label m-card__label--podcast">Podcast</span>
+                </div>
+                <div class="m-card__body">
+                  <h3 class="m-card__title">ポッドキャスト忘年会、2017年の振り返り</h3>
+                  <p class="m-card__content">さて、前回の記事ではVue.JSの基本的な動作を管理画面で実装する例をお見せしたが、今回は次のような...</p>
+                  <div class="m-card__meta">
+                    <div class="m-card__thumb" style="background-image: url('/assets/images/author-1.png');"></div>
+                    <div class="m-card__author">ほげ・たろう</div>
+                    <div class="m-card__date"><time datetime="2018-01-18">2018年1月13日</time></div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </li>
+
+          <li class="o-articles__item">
+            <article class="m-card">
+              <a href="#" class="m-card__wrapper-link">
+                <div class="m-card__image" style="background-image: url('/assets/images/photo-7.jpg')">
+                  <span class="m-card__label m-card__label--podcast">Podcast</span>
+                </div>
+                <div class="m-card__body">
+                  <h3 class="m-card__title">ポッドキャスト忘年会、2017年の振り返り</h3>
+                  <p class="m-card__content">さて、前回の記事ではVue.JSの基本的な動作を管理画面で実装する例をお見せしたが、今回は次のような...</p>
+                  <div class="m-card__meta">
+                    <div class="m-card__thumb" style="background-image: url('/assets/images/author-1.png');"></div>
+                    <div class="m-card__author">ほげ・たろう</div>
+                    <div class="m-card__date"><time datetime="2018-01-18">2018年1月13日</time></div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </li>
+
+          <li class="o-articles__item">
+            <article class="m-card">
+              <a href="#" class="m-card__wrapper-link">
+                <div class="m-card__image" style="background-image: url('/assets/images/photo-1.jpg')">
+                  <span class="m-card__label m-card__label--podcast">Podcast</span>
+                </div>
+                <div class="m-card__body">
+                  <h3 class="m-card__title">ポッドキャスト忘年会、2017年の振り返り</h3>
+                  <p class="m-card__content">さて、前回の記事ではVue.JSの基本的な動作を管理画面で実装する例をお見せしたが、今回は次のような...</p>
+                  <div class="m-card__meta">
+                    <div class="m-card__thumb" style="background-image: url('/assets/images/author-1.png');"></div>
+                    <div class="m-card__author">ほげ・たろう</div>
+                    <div class="m-card__date"><time datetime="2018-01-18">2018年1月13日</time></div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </li>
+        </ul><!-- /.o-articles__list-->
+
       </div><!-- /.o-articles -->
     </section><!-- /.p-front-recent -->
 
+    <div id="app"></div>
   </div><!-- /.t-content -->
 </main><!-- /#o-main -->
 
@@ -114,9 +249,9 @@
   </div><!-- /.t-content -->
 </div><!-- /#o-footer -->
 
-<script src="/assets/js/dev-vendor.js"></script>
-<script src="/assets/js/dev-index.js"></script>
-<!--<script src="/assets/js/bundle.js"></script>-->
+<div id="js-overlay-global" class="a-overlay-global" aria-expanded="false"></div><!-- /.a-overlay-global -->
+
+<script src="/assets/js/bundle.js"></script>
 </body>
 </html>
 

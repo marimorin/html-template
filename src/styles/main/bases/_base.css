@@ -43,7 +43,7 @@ body {
 }
 
 a {
-  transition: opacity .3s;
+  transition: opacity .3s ease-out;
 }
 
 a:link,

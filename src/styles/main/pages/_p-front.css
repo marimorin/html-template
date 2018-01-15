@@ -1,3 +1,8 @@
-.p-front {
-
+body.p-front {
+  #o-main {
+    padding-top: 30px;
+  }
+  .a-title-front-main {
+    margin-bottom: 30px;
+  }
 }

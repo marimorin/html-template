@@ -6,49 +6,25 @@ const DIST_DIR = `${__dirname}/public/assets/`
 const pathsToClean = [ `${DIST_DIR}css`, `${DIST_DIR}js`, ]
 const cleanOptions = { exclude:  [] }
 
-let entry = {}
 let plugins = [
-  new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'dev') }),
+  new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development') }),
+  new webpack.ProvidePlugin({ jQuery: "jquery", $: "jquery" }),
+  new CleanWebpackPlugin(pathsToClean, cleanOptions),
 ]
 
 switch (process.env.NODE_ENV) {
-  case "production":
-    entry = { bundle: ['./src/js/vendor/index.js', './src/js/main/index.js', './src/js/app/index.js'] }
-    plugins = plugins.concat([
-      new webpack.ProvidePlugin({ jQuery: "jquery", $: "jquery" }),
-      new CleanWebpackPlugin(pathsToClean, cleanOptions),
-      new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
-      new ExtractTextPlugin({ filename: "css/[name].css" })
-    ])
-    break
-  case "vendor":
-    entry = { "dev-vendor": './src/js/vendor/index.js' }
-    plugins = plugins.concat([
-      new webpack.ProvidePlugin({ jQuery: "jquery", $: "jquery" }),
-      new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
-      new ExtractTextPlugin({ filename: "css/[name].css" })
-    ])
-    break
   case "development":
-    entry = { "dev-index": [ 'babel-polyfill', './src/js/main/index.js' ] }
     plugins = plugins.concat([
       new ExtractTextPlugin({ filename: "css/[name].css" })
     ])
     break
-  case "hot-development":
-    entry = { "dev-index": [ 'babel-polyfill', './src/js/main/index.js' ] }
+  case "production":
     plugins = plugins.concat([
-      new webpack.HotModuleReplacementPlugin()
+      new ExtractTextPlugin({ filename: "css/[name].css" }),
+      new webpack.optimize.UglifyJsPlugin({ sourceMap: true })
     ])
     break
-  case "application":
-    entry = { "dev-app": [ './src/js/app/index.js' ] }
-    plugins = plugins.concat([
-      new ExtractTextPlugin({ filename: "css/[name].css" })
-    ])
-    break
-  case "hot-application":
-    entry = { "dev-app": [ './src/js/app/index.js' ] }
+  case "hot":
     plugins = plugins.concat([
       new webpack.HotModuleReplacementPlugin()
     ])
@@ -57,7 +33,9 @@ switch (process.env.NODE_ENV) {
 }
 
 module.exports = {
-  entry: entry,
+  entry: {
+    bundle: ['babel-polyfill', './src/js/vendor/index.js', './src/js/main/index.js', './src/js/app/index.js']
+  },
   output: { path: `${DIST_DIR}`, filename: 'js/[name].js', publicPath: "/assets/" },
   module: {
     rules: [
@@ -91,18 +69,24 @@ module.exports = {
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            { loader: 'css-loader', options: { sourceMap: true, minimize: true } },
+        use: process.env.NODE_ENV === 'hot'
+          ? [
+            { loader: 'style-loader', options: { sourceMap: true } },
+            { loader: 'css-loader', options: { sourceMap: true } },
             { loader: 'sass-loader', options: { sourceMap: true } }
           ]
-        })
+          : ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: [
+              { loader: 'css-loader', options: { sourceMap: true } },
+              { loader: 'sass-loader', options: { sourceMap: true } }
+            ]
+          })
       },
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        use: process.env.NODE_ENV === 'hot-application' || process.env.NODE_ENV === 'hot-development'
+        use: process.env.NODE_ENV === 'hot'
           ? [
             { loader: 'style-loader', options: { sourceMap: true } },
             { loader: 'css-loader', options: { sourceMap: true } },
@@ -119,7 +103,6 @@ module.exports = {
     ]
   },
   devtool: 'inline-source-map',
-  // devtool: process.env.NODE_ENV === 'vendor' ? false : 'inline-source-map',
   devServer: {
     contentBase: `${__dirname}/public`,
     historyApiFallback: true,

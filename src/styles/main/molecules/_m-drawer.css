@@ -1,0 +1,23 @@
+.m-drawer-global {
+  width: 300px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  background: white;
+  transform: translate3d(0, 0, 0);
+  transition: all .3s ease-in-out;
+  &[aria-hidden="true"] {
+    transform: translate3d(100%, 0, 0);
+  }
+  & &__list { }
+  & &__item {
+    border-bottom: solid 1px #333;
+  }
+  & &__link {
+    display: block;
+    padding: 5px 10px;
+  }
+}
+

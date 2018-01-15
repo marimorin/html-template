@@ -1,7 +1,7 @@
 .t-content {
   width: var(--width--per_xl);
-  max-width: var(--width--lg);
-  padding: 0 15px;
+  max-width: var(--width--xl);
+  margin: 0 15px;
   @media (--md-max) {
   }
 }

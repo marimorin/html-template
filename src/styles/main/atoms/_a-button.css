@@ -1,5 +1,5 @@
 .a-btn {
-  &.--primary {
+  &--primary {
     background: olive;
   }
 }
