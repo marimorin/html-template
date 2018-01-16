@@ -1,197 +1,258 @@
 <!DOCTYPE HTML>
 <html lang="ja">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
-	<meta charset="UTF-8">
-	<title>Sample Templete</title>
-	<meta name="description" content="xxxxx">
-	<meta name="keywords" content="xxxxx">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="format-detection" content="telephone=no">
+  <meta charset="UTF-8">
+  <title>Sample Templete</title>
+  <meta name="description" content="xxxxx">
+  <meta name="keywords" content="xxxxx">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
 
-	<meta property="og:type" content="website">
-	<meta property="og:site_name" content="xxxxx">
-	<meta property="og:url" content="https://www.google.com/">
-	<meta property="og:image" content="https://www.google.com/common/images/og_image.png">
-	<meta property="og:title" content="xxxxx">
-	<meta property="og:description" content="xxxxx">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="xxxxx">
+  <meta property="og:url" content="https://www.google.com/">
+  <meta property="og:image" content="https://www.google.com/common/images/og_image.png">
+  <meta property="og:title" content="xxxxx">
+  <meta property="og:description" content="xxxxx">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="icon" type="image/vnd.microsoft.icon" href="https://www.google.com/favicon.ico">
-	<link rel="apple-touch-icon" href="https://www.google.com/apple-touch-icon.png">
+  <link rel="icon" type="image/vnd.microsoft.icon" href="https://www.google.com/favicon.ico">
+  <link rel="apple-touch-icon" href="https://www.google.com/apple-touch-icon.png">
 
-  <link rel="stylesheet" href="/assets/css/dev-vendor.css">
-  <link rel="stylesheet" href="/assets/css/dev-index.css">
-  <!--<link rel="stylesheet" href="/assets/css/bundle.css">-->
+  <link rel="stylesheet" href="/assets/css/bundle.css">
 
 </head>
-<body>
+<body class="p-front">
 
-<div id="header-wrap">
-	<header id="header">
-		<div class="header-in">
-			<div class="header-logo">
-				<h1 class="fa-">title-hoge</h1>
-			</div>
-			<nav class="header-nav">
-				<ul>
-					<li><a href="#" class="fa-facebook">会社概要</a></li>
-					<li><a href="#">採用情報</a></li>
-					<li><a href="#">お問い合わせ</a></li>
-				</ul>
-			</nav>
-			<div id="btn-humberger">
-				<a href="#"><i></i></a>
-			</div><!-- /#btn-humberger -->
-		</div><!-- /.header-in -->
-	</header><!-- /#head -->
+<header id="o-header" class="t-container" role="banner">
+  <div class="t-content">
 
-	<nav id="gnav">
-		<ul>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">XXX</a></li>
-			<li><a href="#">XXX</a></li>
-			<li><a href="#">XXX</a></li>
-			<li><a href="#">XXX</a></li>
-		</ul>
-	</nav>
-</div><!-- /#header-wrap -->
+    <div class="a-logo-header">
+      <a class="a-logo-header__link" href="/">HOGE STYLE</a>
+    </div><!-- /.a-logo--header -->
 
-<div id="slide-menu">
-	<nav>
-		<ul>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">XXX</a></li>
-			<li><a href="#">XXX</a></li>
-			<li><a href="#">XXX</a></li>
-			<li><a href="#">XXX</a></li>
-		</ul>
-	</nav>
-</div><!-- /#slide-menu -->
+    <nav class="m-nav-header">
+      <ul class="m-nav-header__list">
+        <li class="m-nav-header__item"><a class="m-nav-header__link m-nav-header--greeting" href="#">Greeting</a></li>
+        <li class="m-nav-header__item"><a class="m-nav-header__link m-nav-header--privacy" href="#">Privacy</a></li>
+        <li class="m-nav-header__item"><a class="m-nav-header__link m-nav-header--legal" href="#">Legal</a></li>
+      </ul><!-- /.m-nav-header__list -->
+    </nav><!-- /.m-nav-header -->
 
-<div id="main">
-	<div class="main-in">
-		<div id="cont">
+    <button id="js-btn-hamburger" class="a-btn-hamburger" aria-expanded="false" aria-controls="js-drawer-global, js-a-overlay-global">
+      <i class="a-btn-hamburger__bar"></i>
+      <i class="a-btn-hamburger__bar"></i>
+      <i class="a-btn-hamburger__bar"></i>
+    </button>
 
-      <div class="panel panel-success">
-        <div class="panel-heading">
-          <h2 class="panel-title">ボタンを押して処理を実行する</h2>
-        </div>
-        <div class="panel-body">
-          <p>Console に計算結果を出力します。</p>
-          <form>
-            <div class="form-group">
-              <label for="inputNumber">整数</label>
-              <input type="text" class="form-control" id="inputNumber" placeholder="10" value="10">
-              <p class="help-block">二倍した値を出力します。</p>
-            </div>
-            <div class="form-group">
-              <label for="inputName">名前</label>
-              <input type="text" class="form-control" id="inputName" placeholder="聡太" value="聡太">
-              <p class="help-block">挨拶します。</p>
-            </div>
-            <button id="btnSubmit" type="button" class="btn btn-primary">ボタン</button>
-            <button id="btnClear" type="button" class="btn btn-default">クリア</button>
-          </form>
-          <p id="output1" style="display:none;"></p>
-          <p id="output2" style="display:none;"></p>
-        </div>
-      </div>
+    <nav id="js-drawer-global" class="m-drawer-global" role="navigation" aria-hidden="true" aria-labelledby="js-btn-hamburger">
+      <ul class="m-drawer-global__list">
+        <li class="m-drawer-global__item"><a href="#" class="m-drawer-global__link m-drawer-global__link--home">HOME</a></li>
+        <li class="m-drawer-global__item"><a href="#" class="m-drawer-global__link m-drawer-global__link--about">ABOUT</a></li>
+        <li class="m-drawer-global__item"><a href="#" class="m-drawer-global__link m-drawer-global__link--service">SERVICE</a></li>
+        <li class="m-drawer-global__item"><a href="#" class="m-drawer-global__link m-drawer-global__link--product">PRODUCTS</a></li>
+        <li class="m-drawer-global__item"><a href="#" class="m-drawer-global__link m-drawer-global__link--campaign">CAMPAIGN</a></li>
+        <li class="m-drawer-global__item"><a href="#" class="m-drawer-global__link m-drawer-global__link--contact">CONTACT</a></li>
+      </ul>
+    </nav><!-- /.drawer-global -->
 
-      <div class="panel panel-info">
-        <div class="panel-heading">
-          <h2 class="panel-title">Font Awesome のアイコンを表示する</h2>
-        </div>
-        <div class="panel-body">
-          <i class="fa fa-bus fa-3x" aria-hidden="true"></i>
-          <i class="fa fa-camera-retro fa-3x" aria-hidden="true"></i>
-          <i class="fa fa-cog fa-spin fa-3x fa-fw" aria-hidden="true"></i>
-        </div>
-      </div>
+  </div><!-- /.t-content -->
+</header><!-- /#o-header -->
 
-      <div class="panel panel-danger">
-        <div class="panel-heading">
-          <h2 class="panel-title">Bootstrap のモーダルを表示する</h2>
-          <i class="glyphicon glyphicon-pencil"></i>
-        </div>
-        <div class="panel-body">
-          <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-            モーダルを開きます
-          </button>
-        </div>
-      </div>
+<nav class="o-nav-global t-container" role="navigation">
+  <ul class="o-nav-global__list t-content">
+    <li class="o-nav-global__item"><a class="o-nav-global__link o-nav-global__link--home" href="#">HOME</a></li>
+    <li class="o-nav-global__item"><a class="o-nav-global__link o-nav-global__link--about" href="#">ABOUT</a></li>
+    <li class="o-nav-global__item"><a class="o-nav-global__link o-nav-global__link--service" href="#">SERVICE</a></li>
+    <li class="o-nav-global__item"><a class="o-nav-global__link o-nav-global__link--products" href="#">PRODUCTS</a></li>
+    <li class="o-nav-global__item"><a class="o-nav-global__link o-nav-global__link--campaign" href="#">CAMPAIGN</a></li>
+    <li class="o-nav-global__item"><a class="o-nav-global__link o-nav-global__link--contact" href="#">CONTACT</a></li>
+  </ul><!-- /.t-content -->
+</nav><!-- /.o-nav-global -->
 
-      <!-- Modal -->
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <h4 class="modal-title" id="myModalLabel">モーダル タイトル</h4>
-            </div>
-            <div class="modal-body">
-              [OK]ボタンを押しても何も起きません！
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">OK</button>
-            </div>
-          </div>
-        </div>
-      </div>
+<main id="o-main" class="t-container" role="main">
+  <div class="t-content">
 
-<div class="ELM">
-<h1 class="ttl-main">Title Main</h1>
-</div>
+    <section class="p-front-recent">
+      <h2 class="a-title-front-main">Recent</h2>
 
-<div class="ELM">
-<h1 class="ttl-main">Title Main</h1>
-</div>
+      <div class="o-articles">
 
+        <ul class="o-articles__list o-articles__list--grid3">
+          <li class="o-articles__item">
+            <article class="m-card">
+              <a href="#" class="m-card__wrapper-link">
+                <div class="m-card__image" style="background-image: url('/assets/images/photo-1.jpg')">
+                  <span class="m-card__label m-card__label--podcast">Podcast</span>
+                </div>
+                <div class="m-card__body">
+                  <h3 class="m-card__title">ポッドキャスト忘年会、2017年の振り返り</h3>
+                  <p class="m-card__content">さて、前回の記事では前回の記事では前回の記事ではVVV前回の記事ではVue.JSの基本的な動作を管理画面で実装する例をお見せしたが、今回は次のような...</p>
+                  <div class="m-card__meta">
+                    <div class="m-card__thumb" style="background-image: url('/assets/images/author-1.png');"></div>
+                    <div class="m-card__author">ほげ・たろう</div>
+                    <div class="m-card__date"><time datetime="2018-01-18">2018年1月13日</time></div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </li>
 
-<div id="app"></div>
+          <li class="o-articles__item">
+            <article class="m-card">
+              <a href="#" class="m-card__wrapper-link">
+                <div class="m-card__image" style="background-image: url('/assets/images/photo-2.jpg')">
+                  <span class="m-card__label m-card__label--podcast">Podcast</span>
+                </div>
+                <div class="m-card__body">
+                  <h3 class="m-card__title">ポッドキャスト忘年会、2017年の振り返り</h3>
+                  <p class="m-card__content">さて、前回の記事ではVue.JSの基本的な動作を管理画面で実装する例をお見せしたが、今回は次のような...</p>
+                  <div class="m-card__meta">
+                    <div class="m-card__thumb" style="background-image: url('/assets/images/author-1.png');"></div>
+                    <div class="m-card__author">ほげ・たろう</div>
+                    <div class="m-card__date"><time datetime="2018-01-18">2018年1月13日</time></div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </li>
 
+          <li class="o-articles__item">
+            <article class="m-card">
+              <a href="#" class="m-card__wrapper-link">
+                <div class="m-card__image" style="background-image: url('/assets/images/photo-3.jpg')">
+                  <span class="m-card__label m-card__label--podcast">Podcast</span>
+                </div>
+                <div class="m-card__body">
+                  <h3 class="m-card__title">ポッドキャスト忘年会、2017年の振り返り</h3>
+                  <p class="m-card__content">さて、前回の記事ではVue.JSの基本的な動作を管理画面で実装する例をお見せしたが、今回は次のような...</p>
+                  <div class="m-card__meta">
+                    <div class="m-card__thumb" style="background-image: url('/assets/images/author-1.png');"></div>
+                    <div class="m-card__author">ほげ・たろう</div>
+                    <div class="m-card__date"><time datetime="2018-01-18">2018年1月13日</time></div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </li>
 
+          <li class="o-articles__item">
+            <article class="m-card">
+              <a href="#" class="m-card__wrapper-link">
+                <div class="m-card__image" style="background-image: url('/assets/images/photo-4.jpg')">
+                  <span class="m-card__label m-card__label--podcast">Podcast</span>
+                </div>
+                <div class="m-card__body">
+                  <h3 class="m-card__title">ポッドキャスト忘年会、2017年の振り返り</h3>
+                  <p class="m-card__content">さて、前回の記事ではVue.JSの基本的な動作を管理画面で実装する例をお見せしたが、今回は次のような...</p>
+                  <div class="m-card__meta">
+                    <div class="m-card__thumb" style="background-image: url('/assets/images/author-1.png');"></div>
+                    <div class="m-card__author">ほげ・たろう</div>
+                    <div class="m-card__date"><time datetime="2018-01-18">2018年1月13日</time></div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </li>
+        </ul><!-- /.o-articles__list-->
 
-		</div><!-- /#cont -->
+        <ul class="o-articles__list o-articles__list--grid4">
+          <li class="o-articles__item">
+            <article class="m-card">
+              <a href="#" class="m-card__wrapper-link">
+                <div class="m-card__image" style="background-image: url('/assets/images/photo-5.jpg')">
+                  <span class="m-card__label m-card__label--podcast">Podcast</span>
+                </div>
+                <div class="m-card__body">
+                  <h3 class="m-card__title">ポッドキャスト忘年会、2017年の振り返り</h3>
+                  <p class="m-card__content">さて、前回の記事ではVue.JSの基本的な動作を管理画面で実装する例をお見せしたが、今回は次のような...</p>
+                  <div class="m-card__meta">
+                    <div class="m-card__thumb" style="background-image: url('/assets/images/author-1.png');"></div>
+                    <div class="m-card__author">ほげ・たろう</div>
+                    <div class="m-card__date"><time datetime="2018-01-18">2018年1月13日</time></div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </li>
 
-		<div id="sidebar">side</div><!-- /#sidebar -->
-	</div><!-- /.main-in -->
-</div><!-- /#main -->
+          <li class="o-articles__item">
+            <article class="m-card">
+              <a href="#" class="m-card__wrapper-link">
+                <div class="m-card__image" style="background-image: url('/assets/images/photo-6.jpg')">
+                  <span class="m-card__label m-card__label--podcast">Podcast</span>
+                </div>
+                <div class="m-card__body">
+                  <h3 class="m-card__title">ポッドキャスト忘年会、2017年の振り返り</h3>
+                  <p class="m-card__content">さて、前回の記事ではVue.JSの基本的な動作を管理画面で実装する例をお見せしたが、今回は次のような...</p>
+                  <div class="m-card__meta">
+                    <div class="m-card__thumb" style="background-image: url('/assets/images/author-1.png');"></div>
+                    <div class="m-card__author">ほげ・たろう</div>
+                    <div class="m-card__date"><time datetime="2018-01-18">2018年1月13日</time></div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </li>
 
-<footer id="footer">
-	<div class="footer-in">
-		<p class="copyright"><small>&copy; copyright</small></p>
-	</div><!-- /.footer-in -->
-</footer><!-- /#foot -->
+          <li class="o-articles__item">
+            <article class="m-card">
+              <a href="#" class="m-card__wrapper-link">
+                <div class="m-card__image" style="background-image: url('/assets/images/photo-7.jpg')">
+                  <span class="m-card__label m-card__label--podcast">Podcast</span>
+                </div>
+                <div class="m-card__body">
+                  <h3 class="m-card__title">ポッドキャスト忘年会、2017年の振り返り</h3>
+                  <p class="m-card__content">さて、前回の記事ではVue.JSの基本的な動作を管理画面で実装する例をお見せしたが、今回は次のような...</p>
+                  <div class="m-card__meta">
+                    <div class="m-card__thumb" style="background-image: url('/assets/images/author-1.png');"></div>
+                    <div class="m-card__author">ほげ・たろう</div>
+                    <div class="m-card__date"><time datetime="2018-01-18">2018年1月13日</time></div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </li>
 
-<div id="overlay"></div>
+          <li class="o-articles__item">
+            <article class="m-card">
+              <a href="#" class="m-card__wrapper-link">
+                <div class="m-card__image" style="background-image: url('/assets/images/photo-1.jpg')">
+                  <span class="m-card__label m-card__label--podcast">Podcast</span>
+                </div>
+                <div class="m-card__body">
+                  <h3 class="m-card__title">ポッドキャスト忘年会、2017年の振り返り</h3>
+                  <p class="m-card__content">さて、前回の記事ではVue.JSの基本的な動作を管理画面で実装する例をお見せしたが、今回は次のような...</p>
+                  <div class="m-card__meta">
+                    <div class="m-card__thumb" style="background-image: url('/assets/images/author-1.png');"></div>
+                    <div class="m-card__author">ほげ・たろう</div>
+                    <div class="m-card__date"><time datetime="2018-01-18">2018年1月13日</time></div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </li>
+        </ul><!-- /.o-articles__list-->
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-<script type="text/javascript">
-  {
-    const htmlEscape = (s) => {
-      return s.replace(/\r?\n/, '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-    }
-		const elms = document.querySelectorAll('.ELM')
-    elms.forEach(elm => {
-      const pre = document.createElement('pre')
-			const code = document.createElement('code')
-			code.innerHTML = htmlEscape(elm.innerHTML)
-      pre.appendChild(code)
-			elm.appendChild(pre)
-    })
-		hljs.initHighlightingOnLoad();
-  }
-</script>
-<style>
-	.ELM { border-bottom: solid 1px #eee; padding-bottom:20px; margin-bottom:20px; }
-</style>
-<script src="/assets/js/dev-vendor.js"></script>
-<script src="/assets/js/dev-index.js"></script>
-<script src="/assets/js/dev-app.js"></script>
-<!--<script src="/assets/js/bundle.js"></script>-->
+      </div><!-- /.o-articles -->
+    </section><!-- /.p-front-recent -->
+
+    <div id="app"></div>
+  </div><!-- /.t-content -->
+</main><!-- /#o-main -->
+
+<footer id="o-footer" class="t-container" role="contentinfo">
+  <div class="t-content">
+    <div class="a-copyright">
+      <small>(C) Copyrights. All Rights Reserved.</small>
+    </div>
+  </div><!-- /.t-content -->
+</footer><!-- /#o-footer -->
+
+<div id="js-a-overlay-global" class="a-overlay-global" aria-hidden="true" aria-labelledby="js-btn-hamburger"></div><!-- /.a-overlay-global -->
+
+<script src="/assets/js/bundle.js"></script>
 </body>
 </html>
+
 

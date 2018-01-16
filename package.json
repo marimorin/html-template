@@ -13,9 +13,9 @@
     "url": "git@marimorin"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack --progress --colors --watch",
+    "start": "cross-env NODE_ENV=hot webpack-dev-server --progress --colors",
     "release": "cross-env NODE_ENV=production webpack",
-    "hot": "cross-env NODE_ENV=hot webpack-dev-server --progress --colors",
+    "watch": "cross-env NODE_ENV=development webpack --progress --colors --watch",
     "server": "browser-sync start -s public -f public"
   },
   "description": "",

@@ -4,7 +4,7 @@
   }
 }
 
-.a-btn-humberger {
+.a-btn-hamburger {
   @mixin flex-j-a-d center, center, column;
   width: 45px;
   height: 45px;
@@ -12,6 +12,9 @@
   border: none;
   background: none;
   padding: 0;
+  position: relative;
+  z-index: 110;
+  cursor: pointer;
   & &__bar {
     @apply --color-bg--white;
     display: block;
@@ -24,7 +27,7 @@
     &:last-of-type { transform: translateY(7px) rotate(0deg); }
   }
   &[aria-expanded="true"] {
-    .a-btn-humberger__bar {
+    .a-btn-hamburger__bar {
       &:first-of-type { transform: translateY(3px) rotate(-315deg); }
       &:nth-of-type(2) { opacity: 0; }
       &:last-of-type { transform: translateY(-3px) rotate(315deg); }
