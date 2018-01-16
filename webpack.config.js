@@ -34,7 +34,7 @@ switch (process.env.NODE_ENV) {
 
 module.exports = {
   entry: {
-    bundle: ['babel-polyfill', './src/js/vendor/index.js', './src/js/main/index.js', './src/js/app/index.js']
+    bundle: ['babel-polyfill', './src/js/vendor/index.js', './src/js/main/index.js', './src/js/app/index.js', './src/js/app-hoge/main.js']
   },
   output: { path: `${DIST_DIR}`, filename: 'js/[name].js', publicPath: "/assets/" },
   module: {
