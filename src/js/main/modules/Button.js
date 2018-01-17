@@ -2,8 +2,8 @@ export default class Button {
   constructor(selector) {
     this.selector = selector
     this.element = document.querySelector(this.selector)
-    this.actionType = this.element.dataset.actionType;
     if (this.element === null) { return }
+    this.actionType = this.element.dataset.actionType;
     this.controls = (() => {
       let controls = this.element.getAttribute('aria-controls').split(',')
       return controls.map((control) => {
