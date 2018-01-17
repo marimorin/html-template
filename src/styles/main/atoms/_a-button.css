@@ -1,6 +1,28 @@
 .a-btn {
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
   &--primary {
     background: olive;
+  }
+}
+
+.a-btn-icon {
+  @mixin flex-j-a center, center;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  &--close {
+    @apply --color-txt--white;
+    @apply --color-bg--accent;
+    @apply --fs--xl;
   }
 }
 
@@ -8,9 +30,6 @@
   @mixin flex-j-a-d center, center, column;
   width: 45px;
   height: 45px;
-  outline: none;
-  border: none;
-  background: none;
   padding: 0;
   position: relative;
   z-index: 110;

@@ -2,7 +2,7 @@
   @apply --color-bg--main;
   flex-grow:0;
   .t-content {
-    display: flex;
+    @mixin flex-a center;
     .a-logo-header {
       flex-grow: 0;
     }

@@ -3,21 +3,35 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  left: 0;
+  right: 0;
   z-index: 110;
-  background: white;
+  background: #333;
   transform: translate3d(0, 0, 0);
   transition: all .3s ease-in-out;
   &[aria-hidden="true"] {
-    transform: translate3d(-100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
   }
+  & &__header {
+    @mixin flex-j-a space-between, center;
+    border-bottom: solid 1px #999;
+  }
+  & &__logo {
+    @apply --fs--lg;
+    @apply --color-txt--white;
+    padding-left: 15px;
+  }
+  & &__button-close { }
+
   & &__list { }
   & &__item {
-    border-bottom: solid 1px #333;
+    border-bottom: solid 1px #999;
   }
   & &__link {
     display: block;
-    padding: 5px 10px;
+    color: white;
+    letter-spacing: .05em;
+    padding: 10px 15px;
+    i { margin-right: 10px; }
   }
 }
 
