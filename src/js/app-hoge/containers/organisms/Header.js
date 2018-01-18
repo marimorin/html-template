@@ -1,18 +1,15 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
 import Logo from '../../components/atoms/Logo'
 
 const Header = (props) => {
+  let logoData = { label: "Hello!!", path: "/" }
   return (
     <header id="o-header" className="t-container" role="banner">
       <div className="t-content">
-        <Logo label="Hello!!" />
+        <Logo {...logoData} />
       </div>
     </header>
   )
-}
-Header.propTypes = {
-  label: PropTypes.string
 }
 
 export default Header

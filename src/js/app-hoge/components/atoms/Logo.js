@@ -1,13 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
-const Logo = (props) => {
+const Logo = ({ label, path}) => {
   return (
     <div className="a-logo-header">
-      <a className="a-logo-header__link" href="/">{props.label}</a>
+      <Link className="a-logo-header__link" to={path}>{label}</Link>
     </div>
   )
 }
+
 Logo.propTypes = {
   label: PropTypes.string
 }
