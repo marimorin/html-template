@@ -3,7 +3,7 @@ import NavItem from '../../components/atoms/NavItem'
 
 const NavGlobal = (props) => {
   let baseClass = 'o-nav-global'
-  let navItems = [
+  let items = [
     { label: 'HOME', path: '/'},
     { label: 'ABOUT', path: '/about'},
     { label: 'SERVICE', path: '/service'},
@@ -11,13 +11,13 @@ const NavGlobal = (props) => {
     { label: 'CAMPAIGN', path: '/campaign'},
     { label: 'CONTACT', path: '/contact'},
   ]
-  let resultItems = navItems.map((item, i) => {
+  let resItems = items.map((item, i) => {
     let o = Object.assign(item, { baseClass })
     return <NavItem key={`itemKey-${i}`} {...o} />
   })
   return (
     <nav className={`${baseClass} t-container`} role="navigation">
-      <ul className={`${baseClass} ${baseClass}__list t-content`}>{resultItems}</ul>
+      <ul className={`${baseClass} ${baseClass}__list t-content`}>{resItems}</ul>
     </nav>
   )
 }

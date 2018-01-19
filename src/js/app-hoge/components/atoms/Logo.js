@@ -11,7 +11,8 @@ const Logo = ({ label, path}) => {
 }
 
 Logo.propTypes = {
-  label: PropTypes.string
+  label: PropTypes.string,
+  path: PropTypes.string
 }
 
 export default Logo

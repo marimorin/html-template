@@ -9,24 +9,25 @@ const cleanOptions = { exclude:  [] }
 let plugins = [
   new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development') }),
   new webpack.ProvidePlugin({ jQuery: "jquery", $: "jquery" }),
-  new CleanWebpackPlugin(pathsToClean, cleanOptions),
 ]
 
 switch (process.env.NODE_ENV) {
   case "development":
     plugins = plugins.concat([
-      new ExtractTextPlugin({ filename: "css/[name].css" })
+      new ExtractTextPlugin({ filename: "css/[name].css" }),
+      new CleanWebpackPlugin(pathsToClean, cleanOptions),
     ])
     break
   case "production":
     plugins = plugins.concat([
       new ExtractTextPlugin({ filename: "css/[name].css" }),
-      new webpack.optimize.UglifyJsPlugin({ sourceMap: true })
+      new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
+      new CleanWebpackPlugin(pathsToClean, cleanOptions),
     ])
     break
   case "hot":
     plugins = plugins.concat([
-      new webpack.HotModuleReplacementPlugin()
+      new webpack.HotModuleReplacementPlugin(),
     ])
     break
   default: break
