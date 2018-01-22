@@ -1,14 +1,52 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
-import { BrowserRouter } from 'react-router-dom'
+import { Provider, connect } from 'react-redux'
+import { createStore } from 'redux'
+import { increment, decrement } from './actions/index'
+import { counter } from './reducers/index'
+import { BrowserRouter as Router } from 'react-router-dom'
 import Layout from './containers/Layout'
 
-const App = () => {
+const CounterApp = ({ count, onIncrement, onDecrement }) => {
   return (
-    <BrowserRouter>
-      <Layout />
-    </BrowserRouter>
+    <div>
+      <h1>{ count }</h1>
+      <button onClick={ e => onIncrement(e) }>+</button>
+      <button onClick={ e => onDecrement(e) }>-</button>
+    </div>
   )
 }
 
-render(<App />, document.querySelector('#app-hoge'))
+const mapStateToProps = dispatch => ({
+
+})
+
+const Hoge = connect(
+  state => ({
+    count: state
+  }),
+  dispatch => ({
+    onIncrement() { dispatch(increment()) },
+    onDecrement() { dispatch(decrement()) },
+  })
+)(CounterApp)
+
+const store = createStore(counter)
+
+render(
+  <Provider store={store}>
+    <Hoge />
+  </Provider>,
+  document.querySelector('#app-hoge')
+)
+
+// const App = () => {
+//   return (
+//     <Router>
+//       <Layout />
+//     </Router>
+//   )
+// }
+//
+// render(<App />, document.querySelector('#app-hoge'))
+
