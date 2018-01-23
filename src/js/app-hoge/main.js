@@ -17,19 +17,15 @@ const CounterApp = ({ count, onIncrement, onDecrement }) => {
   )
 }
 
-const mapStateToProps = dispatch => ({
-
+const mapStateToProps = state => ({
+  count: state
+})
+const mapDispatchToProps = dispatch => ({
+  onIncrement() { dispatch(increment()) },
+  onDecrement() { dispatch(decrement()) },
 })
 
-const Hoge = connect(
-  state => ({
-    count: state
-  }),
-  dispatch => ({
-    onIncrement() { dispatch(increment()) },
-    onDecrement() { dispatch(decrement()) },
-  })
-)(CounterApp)
+const Hoge = connect(mapStateToProps, mapDispatchToProps)(CounterApp)
 
 const store = createStore(counter)
 
