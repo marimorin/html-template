@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Overlay = ({ isOpenDrawer, onCloseDrawer }) => {
+const Overlay = ({ openedDrawer, closeDrawer }) => {
   return (
-    <div className="a-overlay-global" aria-hidden={!isOpenDrawer} aria-controls="a-btn-hamburger" onClick={onCloseDrawer}></div>
+    <div className="a-overlay-global" aria-hidden={!openedDrawer} aria-controls="a-btn-hamburger" onClick={ e => closeDrawer()}></div>
   )
 }
 

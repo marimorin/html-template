@@ -1,5 +1,5 @@
 import React from 'react'
-import NavItem from '../../components/atoms/NavItem'
+import NavItem from '../atoms/NavItem'
 
 const NavGlobal = (props) => {
   let baseClass = 'o-nav-global'

@@ -1,17 +1,18 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { increment, decrement } from '../actions'
-import CounterApp from '../components/App'
+import { openDrawer, closeDrawer, toggleDrawer } from '../actions/drawer'
+import App from '../components/App'
 
 const mapStateToProps = state => ({
-  count: state
+  openedDrawer: state.drawer.openedDrawer
 })
 
 const mapDispatchToProps = dispatch => ({
-  onIncrement() { dispatch(increment()) },
-  onDecrement() { dispatch(decrement()) },
+  openDrawer() { dispatch(openDrawer()) },
+  closeDrawer() { dispatch(closeDrawer()) },
+  toggleDrawer() { dispatch(toggleDrawer()) },
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(CounterApp)
+export default connect(mapStateToProps, mapDispatchToProps)(App)
 
 

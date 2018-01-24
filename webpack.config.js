@@ -43,22 +43,8 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: [{
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              ['env', { 'modules': false }]
-            ]
-          }
-        }]
+        use: 'babel-loader',
       },
-      // {
-      //   enforce: "pre",
-      //   test: /\.js$/,
-      //   exclude: /node_modules/,
-      //   loader: "eslint-loader",
-      //   options: {}
-      // },
       {
         test: /\.(png|woff|woff2|eot|ttf|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         use: [

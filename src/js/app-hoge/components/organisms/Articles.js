@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../../components/molecules/Card'
+import Card from '../molecules/Card'
 
 const Articles = ({ items }) => {
   let resItems = items.map((item, i) => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import Copyright from '../../components/atoms/Copyright'
+import Copyright from '../atoms/Copyright'
 
 const Footer = (props) => {
   let copyrightLabel = "(C) Copyrights. All Rights Reserved."

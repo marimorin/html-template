@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Logo from '../../components/atoms/Logo'
-import Hamburger from '../../components/atoms/Hamburger'
-import NavHeader from '../../components/molecules/NavHeader'
+import Logo from '../atoms/Logo'
+import Hamburger from '../atoms/Hamburger'
+import NavHeader from '../molecules/NavHeader'
 
 const Header = (props) => {
   let logoData = { label: "Hello!!", path: "/" }

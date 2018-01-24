@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Articles from '../../containers/organisms/Articles'
+import Articles from '../organisms/Articles'
 
 const About = (props) => {
   let articleData = {
