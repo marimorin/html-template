@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import PropTypes from 'prop-types'
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom'
 import Header from './organisms/Header'
 import NavGlobal from './organisms/NavGlobal'
 import DrawerGlobal from './organisms/DrawerGlobal'

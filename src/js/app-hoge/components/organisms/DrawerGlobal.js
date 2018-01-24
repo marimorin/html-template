@@ -18,10 +18,10 @@ const DrawerGlobal = ({ openedDrawer, closeDrawer }) => {
     return <NavItem key={`aaa-${i}`} {...o} />
   })
   return (
-    <nav id="js-drawer-global" className={`${baseClass}`} role="navigation" aria-hidden={!openedDrawer} aria-labelledby="js-btn-hamburger">
+    <nav id="o-drawer-global" className={`${baseClass}`} aria-hidden={!openedDrawer} aria-labelledby="a-btn-hamburger">
       <div className={`${baseClass}__header`}>
         <div className={`${baseClass}__logo`}>HOGE STYLE</div>
-        <button type="button" id="js-btn-drawer-close" className={`${baseClass}__button-close a-btn a-btn-icon a-btn-icon--close`} aria-controls="js-btn-hamburger" onClick={closeDrawer}><i className="fa fa-close" aria-hidden='true'></i></button>
+        <button type="button" className={`${baseClass}__button-close a-btn a-btn-icon a-btn-icon--close`} aria-controls="a-btn-hamburger" onClick={closeDrawer}><i className="fa fa-close" aria-hidden='true'></i></button>
       </div>
       <ul className={`${baseClass}__list`}>{resItems}</ul>
     </nav>

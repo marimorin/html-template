@@ -2,14 +2,14 @@ export const OPEN_DRAWER = 'OPEN_DRAWER'
 export const CLOSE_DRAWER = 'CLOSE_DRAWER'
 export const TOGGLE_DRAWER = 'TOGGLE_DRAWER'
 
-export function openDrawer() {
+export function open() {
   return { type: OPEN_DRAWER }
 }
 
-export function closeDrawer() {
+export function close() {
   return { type: CLOSE_DRAWER }
 }
 
-export function toggleDrawer() {
+export function toggle() {
   return { type: TOGGLE_DRAWER }
 }

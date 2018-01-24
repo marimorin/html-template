@@ -8,8 +8,8 @@ const Overlay = ({ openedDrawer, closeDrawer }) => {
 }
 
 Overlay.propTypes = {
-  isOpenDrawer: PropTypes.bool,
-  onCloseDrawer: PropTypes.func
+  openedDrawer: PropTypes.bool,
+  closeDrawer: PropTypes.func
 }
 
 export default Overlay
