@@ -1,12 +1,15 @@
-import {
-  OPEN_DRAWER,
-  CLOSE_DRAWER,
-  TOGGLE_DRAWER
-} from '../actions/drawer'
+import { handleActions } from 'redux-actions'
+import { openDrawer, closeDrawer, toggleDrawer } from '../actions/drawer'
 
 const initialState = {
   openedDrawer: false
 }
+
+const drawer = handleActions({
+  [openDrawer](state) {
+    return { ...state, openedDrawer: true }
+  }
+})
 
 export default (state = initialState, action) => {
   switch(action.type) {
@@ -20,3 +23,4 @@ export default (state = initialState, action) => {
       return state
   }
 }
+
