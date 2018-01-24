@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from '../actions'
+import { INCREMENT, DECREMENT } from '../actions/index'
 
 const initialState = 0
 export function counter(state = initialState, action) {
