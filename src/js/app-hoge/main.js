@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import store from './store'
-import App from './containers'
+// import App from './containers'
+import Hoge from './containers/Hoge'
 
 render(
   <Provider store={store}>
-    <App />
+    <Hoge />
   </Provider>,
   document.querySelector('#app-hoge')
 )
