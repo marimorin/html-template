@@ -1,11 +1,6 @@
-import React from 'react'
 import { connect } from 'react-redux'
 import App from '../components/App'
-import {
-  open as openDrawer,
-  close as closeDrawer,
-  toggle as toggleDrawer
-} from '../actions/drawer'
+import { openDrawer, closeDrawer, toggleDrawer } from '../actions/drawer'
 
 export default connect(
   state => ({

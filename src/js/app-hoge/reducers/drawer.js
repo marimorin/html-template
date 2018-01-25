@@ -8,19 +8,14 @@ const initialState = {
 const drawer = handleActions({
   [openDrawer](state) {
     return { ...state, openedDrawer: true }
+  },
+  [closeDrawer](state) {
+    return { ...state, openedDrawer: false }
+  },
+  [toggleDrawer](state) {
+    return { ...state, openedDrawer: !state.openedDrawer }
   }
-})
+}, initialState)
 
-export default (state = initialState, action) => {
-  switch(action.type) {
-    case OPEN_DRAWER:
-      return Object.assign({}, state, { openedDrawer: true })
-    case CLOSE_DRAWER:
-      return Object.assign({}, state, { openedDrawer: false })
-    case TOGGLE_DRAWER:
-      return Object.assign({}, state, { openedDrawer: !state.openedDrawer })
-    default:
-      return state
-  }
-}
+export default drawer
 
