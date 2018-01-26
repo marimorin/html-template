@@ -1,33 +1,21 @@
-// import { createActions } from 'redux-actions'
-// export const { loading, loaded, error } = createActions('LOADING', 'LOADED', 'ERROR')
-export const type = { LOADING: 'LOADING', LOADED: 'LOADED', ERROR: 'ERROR' }
+import { createAction } from 'redux-actions'
 
-const API_URL = 'https://hacker-news.firebaseio.com/v0/item/15723926.json';
-
-/*
-redux-promiseを使ったActionCreatorでは、
-オブジェクトではなく、関数を返す必要がある
- */
 function hackerNews() {
-  /*
-  ・fetchは、最初にresponseのみを返す
-  ・Body.json()は、promiseを返す
-   */
+  const API_URL = 'https://hacker-news.firebaseio.com/v0/item/15723926.json';
   return fetch(API_URL).then(resp => {
-    if (resp.status !== 200) {
-      throw new Error(resp.statusText);
-    }
-    return resp.json();
-  });
+    // if (resp.status !== 200) {
+    const error = new Error(resp.statusText)
+    error.data = resp
+      throw error
+    // }
+    return resp.json()
+  })
 }
 
-export function loadData() {
-  /*
-  ん？関数ではなく、promiseを返すのか
-  loadDataって、ActionCreatorだっけか。。
-  thenやcatchでActionを返す
-   */
+export const loading = createAction('LOADING')
+export const loadData = createAction('LOAD_DATA', () => {
   return hackerNews()
-    .then(data => ({ type: type.LOADED, data: data }))
-    .catch(err => ({ type: type.ERROR, error: err }));
-}
+    .then(data => data)
+    .catch(err => err)
+})
+

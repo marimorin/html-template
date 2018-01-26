@@ -1,18 +1,19 @@
 import { combineReducers } from 'redux'
 import drawer from './drawer'
-import { type } from '../actions/promise';
+import { handleActions } from 'redux-actions'
+import { loading, loadData } from '../actions/promise';
 
-const initialState = { status: 'LOADING' }
-const promise = (state = initialState, action) => {
-  if (action.type === type.LOADING) {
-    return initialState;
-  } else if (action.type === type.LOADED) {
-    return { status: 'LOADED', data: action.data };
-  } else if (action.type === type.ERROR) {
-    return { status: 'ERROR', error: action.error };
+const initialState = { status: loading }
+
+const promise = handleActions({
+  [loadData](state, action) {
+    debugger
+    return { status: action.type, data: action.payload }
+  },
+  [loading](state, action) {
+    return { status: action.type }
   }
-  return state;
-}
+}, initialState)
 
 export default combineReducers({
   drawer,

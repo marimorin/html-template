@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 // import App from '../components/App'
 import { openDrawer, closeDrawer, toggleDrawer } from '../actions/drawer'
-import { loadData } from '../actions/promise'
+import { loading, loadData } from '../actions/promise'
 
 class Hoge extends Component {
   componentDidMount() {
@@ -11,6 +11,7 @@ class Hoge extends Component {
 
   render() {
     const { status, data, error } = this.props;
+    debugger
 
     switch(status) {
       case 'LOADED':
@@ -34,7 +35,7 @@ class Hoge extends Component {
 
 export default connect(
   state => ({
-    status: state.promise.status || 'LOADING',
+    status: state.promise.status || loading,
     data: state.promise.data,
     error: state.promise.error,
   }),
