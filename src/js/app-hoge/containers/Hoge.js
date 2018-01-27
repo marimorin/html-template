@@ -2,16 +2,15 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 // import App from '../components/App'
 import { openDrawer, closeDrawer, toggleDrawer } from '../actions/drawer'
-import { loading, loadData } from '../actions/promise'
+import { loadingHackerNews, loadHackerNews } from '../actions/hackerNews'
 
 class Hoge extends Component {
   componentDidMount() {
-    this.props.onMounted();
+    this.props.loadHackerNews();
   }
 
   render() {
     const { status, data, error } = this.props;
-    debugger
 
     switch(status) {
       case 'LOADED':
@@ -35,13 +34,13 @@ class Hoge extends Component {
 
 export default connect(
   state => ({
-    status: state.promise.status || loading,
-    data: state.promise.data,
-    error: state.promise.error,
+    status: state.hacker.status || loadingHackerNews,
+    data: state.hacker.data,
+    error: state.hacker.error,
   }),
   dispatch => ({
-    onMounted() {
-      dispatch(loadData());
+    loadHackerNews() {
+      dispatch(loadHackerNews());
     },
   }),
 )(Hoge);
