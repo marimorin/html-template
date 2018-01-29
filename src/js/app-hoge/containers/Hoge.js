@@ -11,7 +11,6 @@ class Hoge extends Component {
 
   render() {
     const { status, data, error } = this.props;
-
     switch(status) {
       case 'LOADED':
         return (
@@ -23,7 +22,7 @@ class Hoge extends Component {
         return (
           <div>
             <h1>エラー</h1>
-            <p>{error.message}</p>
+            <p>{error.statusText}</p>
           </div>
         );
       default:
@@ -36,7 +35,7 @@ export default connect(
   state => ({
     status: state.hacker.status || loadingHackerNews,
     data: state.hacker.data,
-    error: state.hacker.error,
+    error: state.hacker.data,
   }),
   dispatch => ({
     loadHackerNews() {

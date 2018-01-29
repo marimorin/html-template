@@ -15,8 +15,18 @@ function getHackerNews() {
 
 export const loadingHackerNews = createAction('LOADING_HACKER_NEWS')
 export const loadHackerNews = createAction('LOAD_HACKER_NEWS', () => {
-  return getHackerNews()
-    .then(data => data)
+  const API_URL = 'https://hacker-news.firebaseio.com/v0/item/15723926.jsonp';
+  return fetch(API_URL)
+    .then(resp => {
+      if (resp.status !== 200) {
+        const err = new Error()
+        err.message = resp.statusText
+        err.errorData = resp
+        throw err
+      }
+      resp.json()
+    })
+    .then(json => json)
     .catch(err => err)
 })
 
