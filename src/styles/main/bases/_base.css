@@ -39,13 +39,11 @@ ol, ul {
 
 html {
   height: 100%;
-  font-size: 62.5%;
   text-size-adjust: none;
 }
 
 body {
   @mixin flex-j-d strech, column;
-  @apply --fs--md;
   min-height: 100%;
   font-family: var(--font-family--gothic2);
   line-height: 1.4;
@@ -55,28 +53,6 @@ body {
   tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-a {
-  transition: opacity .3s ease-out;
-}
-
-a:link,
-a:visited,
-a:hover,
-a:active {
-  color: var(--color--link);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--color--link);
-  text-decoration: none;
-  opacity: .7;
-}
-
-a,
-a:focus {
-  outline: none;
-}
 
 button,
 input[type="button"],
