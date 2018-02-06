@@ -77,7 +77,9 @@ class Game extends React.Component {
   }
 }
 
-// ReactDOM.render(
-//   <Game />,
-//   document.querySelector("#app")
-// )
+if (document.querySelector('#app')) {
+  ReactDOM.render(
+    <Game />,
+    document.querySelector("#app")
+  )
+}

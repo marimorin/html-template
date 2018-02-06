@@ -24,7 +24,7 @@ export const loadHackerNews = createAction('LOAD_HACKER_NEWS', () => {
         err.errorData = resp
         throw err
       }
-      resp.json()
+      return resp.json()
     })
     .then(json => json)
     .catch(err => err)

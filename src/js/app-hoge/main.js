@@ -5,11 +5,13 @@ import store from './store'
 // import App from './containers'
 import Hoge from './containers/Hoge'
 
-render(
-  <Provider store={store}>
-    <Hoge />
-  </Provider>,
-  document.querySelector('#app-hoge')
-)
+if (document.querySelector('#app-hoge')) {
+  render(
+    <Provider store={store}>
+      <Hoge />
+    </Provider>,
+    document.querySelector('#app-hoge')
+  )
+}
 
 
