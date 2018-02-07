@@ -79,6 +79,7 @@
     "reactstrap": "^5.0.0-beta",
     "redux": "^3.7.2",
     "redux-actions": "^2.2.1",
+    "redux-logger": "^3.0.6",
     "redux-promise": "^0.5.3"
   }
 }

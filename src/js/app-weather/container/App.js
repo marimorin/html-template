@@ -1,39 +1,30 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Button } from 'reactstrap'
-
-const A = 'A'
-const E = 'E'
-const actionA = () => {
-  return fetch('https://hacker-news.firebaseio.com/v0/item/15723926.json')
-    .then(response => response.json())
-    .then(json => {
-      return { type: A, payload: json }
-    })
-    .catch(err => ({ type: E, payload: err }))
-}
+import { loadWeather, hogeWeather } from '../actions/weather'
 
 class App extends Component {
+  componentDidMount() {
+    this.props.loadWeather();
+  }
   render() {
-    const { count, actionA } = this.props
+    const { count, loadWeather, hogeWeather } = this.props
     return (
       <div>
         <h1>{count}</h1>
-        <Button color="danger">Danger!</Button>
+        <button onClick={e => loadWeather()}>Danger!</button>
+        <button onClick={e => hogeWeather()}>Hoge!</button>
       </div>
     )
   }
 }
 
 export default connect(
-  state => {
-    return {
-      count: state
-    }
-  },
+  state => ({
+      count: state.weather.status
+  }),
   dispatch => ({
-    actionA() {
-      dispatch(actionA())
-    }
+    loadWeather() { dispatch(loadWeather()) },
+    hogeWeather() { dispatch(hogeWeather()) }
   })
 )(App)
