@@ -1,20 +1,12 @@
-let nextTodoId = 0
+import { createActions } from 'redux-actions'
 
-export const addTodo = (text) => ({
-  type: 'ADD_TODO',
-  id: nextTodoId++,
-  text
+let currentId = 0
+
+export const { addTodo, toggleTodo } = createActions({
+  ADD_TODO: text => ({ id: currentId++, text }),
+  TOGGLE_TODO: id => ({ id })
 })
 
-export const setVisibilityFilter = (filter) => ({
-  type: 'SET_VISIBILITY_FILTER',
-  filter
+export const { setVisibilityFilter } = createActions({
+  SET_VISIBILITY_FILTER: filter => ({ filter })
 })
-
-export const toggleTodo = (id) => {
-  return {
-    type: 'TOGGLE_TODO',
-    id
-  }
-}
-

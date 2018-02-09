@@ -1,22 +1,14 @@
-import React from 'react'
-import FilterLink from '../containers/FilterLink'
+import React, { Component } from 'react'
+import Link from '../components/Link'
 
-const Footer = () => (
-  <p>
-    Show:
-    {" "}
-    <FilterLink filter="SHOW_ALL">
-      All
-    </FilterLink>
-    {", "}
-    <FilterLink filter="SHOW_ACTIVE">
-      Active
-    </FilterLink>
-    {", "}
-    <FilterLink filter="SHOW_COMPLETED">
-      Completed
-    </FilterLink>
-  </p>
-)
+const Footer = (props) => {
+  return (
+    <div>
+      <Link active={true}>All</Link>{' '}
+      <Link active={true}>Active</Link>{' '}
+      <Link active={true}>Completed</Link>
+    </div>
+  )
+}
 
 export default Footer

@@ -1,10 +1,6 @@
-import { combineReducers } from 'redux'
+import { createAction, handleActions } from 'redux-actions'
 import todos from './todos'
 import visibilityFilter from './visibilityFilter'
+import { combineReducers } from 'redux'
 
-const todoApp = combineReducers({
-  todos,
-  visibilityFilter
-})
-
-export default todoApp
+export default combineReducers({ todos, visibilityFilter })
