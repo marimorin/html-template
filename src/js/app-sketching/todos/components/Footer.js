@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import Link from '../components/Link'
+import FilterLink from '../containers/FilterLink'
 
-const Footer = (props) => {
+const Footer = ({ setVisibilityFilter }) => {
   return (
     <div>
-      <Link active={true}>All</Link>{' '}
-      <Link active={true}>Active</Link>{' '}
-      <Link active={true}>Completed</Link>
+      <FilterLink filter="SHOW_ALL">All</FilterLink>{' '}
+      <FilterLink filter="SHOW_ACTIVE">Active</FilterLink>{' '}
+      <FilterLink filter="SHOW_COMPLETED">Completed</FilterLink>
     </div>
   )
 }

@@ -1,9 +1,12 @@
 import React from 'react'
 
-const Link = ({ active, children }) => {
+const Link = ({ active, children, onClick }) => {
   const elm = active
     ? <span>{children}</span>
-    : <a href="#">{children}</a>
+    : <a href="#" onClick={e => {
+      e.preventDefault()
+      onClick()
+    }}>{children}</a>
   return elm
 }
 
