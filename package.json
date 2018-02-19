@@ -1,13 +1,9 @@
 {
-  "name": "frontend-template",
+  "name": "component-template",
   "version": "1.0.0",
   "main": "main.js",
   "author": "marimorin",
   "license": "MIT",
-  "engines": {
-    "node": ">=9.3.0",
-    "npm": ">=5.5.1"
-  },
   "repository": {
     "type": "git",
     "url": "git@marimorin"
@@ -16,7 +12,8 @@
     "start": "cross-env NODE_ENV=hot webpack-dev-server --progress --colors",
     "release": "cross-env NODE_ENV=production webpack",
     "watch": "cross-env NODE_ENV=development webpack --progress --colors --watch",
-    "server": "browser-sync start -s public -f public"
+    "server": "browser-sync start -s public -f public",
+    "flow": "flow"
   },
   "description": "",
   "devDependencies": {
@@ -40,6 +37,7 @@
     "eslint-loader": "^1.9.0",
     "eslint-plugin-react": "^7.5.1",
     "extract-text-webpack-plugin": "^3.0.2",
+    "flow-bin": "^0.66.0",
     "node-sass": "^4.7.2",
     "postcss-apply": "^0.8.0",
     "postcss-calc": "^6.0.1",
